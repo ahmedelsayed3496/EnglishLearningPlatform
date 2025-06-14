@@ -1,0 +1,119 @@
+﻿@model IEnumerable<EnglishLearningPlatform.Models.Lesson>
+
+@{
+    ViewData["Title"] = "My Lessons";
+}
+
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>@ViewData["Title"]</h2>
+        <a asp-action="Create" class="btn btn-primary">
+            <i class="bi bi-plus-circle"></i> Create New Lesson
+        </a>
+    </div>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">
+            <i class="bi bi-info-circle me-2"></i> You have not created any lessons yet.
+        </div>
+    }
+    else
+    {
+        <div class="lesson-grid">
+            @foreach (var lesson in Model)
+            {
+                <div class="card lesson-card shadow-sm" data-lesson-id="@lesson.LessonId">
+                    <img src="@(string.IsNullOrEmpty(lesson.ImagePath) ? "/images/default-lesson.jpg" : lesson.ImagePath)"
+                         alt="@lesson.Title" class="lesson-card__image">
+
+                    <div class="lesson-card__content">
+                        <h3 class="lesson-card__title">@lesson.Title</h3>
+                        <div class="lesson-card__date">
+                            <i class="bi bi-calendar3"></i> @lesson.CreatedAt.ToString("MMM dd, yyyy")
+                        </div>
+
+                        <div class="lesson-card__progress">
+                            <div class="lesson-card__progress-label">
+                                <span>Listening Progress</span>
+                                <span class="lesson-progress-percentage">0%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar lesson-progress-bar" role="progressbar" style="width: 0%;"
+                                     aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+
+                        <div class="lesson-card__stats">
+                            <span><i class="bi bi-headphones"></i> Audio Lesson</span>
+                            <span><i class="bi bi-card-list"></i> @lesson.Flashcards?.Count() cards</span>
+                        </div>
+
+                        <a asp-action="Details" asp-route-id="@lesson.LessonId"
+                           class="btn btn-primary w-100 mt-2">Continue Learning</a>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <!-- Pagination controls -->
+        @if (ViewBag.TotalPages > 1)
+        {
+            <div class="lessons-pagination mt-4 d-flex justify-content-center">
+                <nav aria-label="Lesson pagination">
+                    <ul class="pagination">
+                        <li class="page-item @(!ViewBag.HasPreviousPage ? "disabled" : "")">
+                            <a class="page-link" asp-action="Index" asp-route-page="@(ViewBag.CurrentPage - 1)" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+
+                        @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                        {
+                            <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
+                                <a class="page-link" asp-action="Index" asp-route-page="@i">@i</a>
+                            </li>
+                        }
+
+                        <li class="page-item @(!ViewBag.HasNextPage ? "disabled" : "")">
+                            <a class="page-link" asp-action="Index" asp-route-page="@(ViewBag.CurrentPage + 1)" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        }
+    }
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load audio progress for each lesson card
+            document.querySelectorAll('.lesson-card').forEach(card => {
+                const lessonId = card.dataset.lessonId;
+                if (!lessonId) return;
+
+                // Get stored progress
+                const audioProgress = localStorage.getItem('lesson_' + lessonId + '_progress');
+                if (audioProgress) {
+                    const progressData = JSON.parse(audioProgress);
+                    const progressBar = card.querySelector('.lesson-progress-bar');
+                    const progressText = card.querySelector('.lesson-progress-percentage');
+
+                    if (progressBar && progressText && progressData.percentCompleted) {
+                        progressBar.style.width = progressData.percentCompleted + '%';
+                        progressBar.setAttribute('aria-valuenow', progressData.percentCompleted);
+                        progressText.textContent = progressData.percentCompleted + '%';
+
+                        // Add complete class if needed
+                        if (progressData.completed) {
+                            card.classList.add('lesson-completed');
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+}

@@ -1,0 +1,311 @@
+﻿/* identity.css - Consistent Card Layout for Identity Pages */
+
+/* Page background */
+body .account,
+body .register,
+body .login,
+body .manage,
+body .reset-password,
+body .forgot-password {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: linear-gradient(180deg, rgba(76, 29, 149, 0.15) 0%, rgba(124, 58, 237, 0.08) 50%, rgba(255, 255, 255, 0) 100%);
+    padding: 3.5rem 0 3.5rem 0;
+}
+
+/* Card container - restored background color and updated dimensions */
+.account .card,
+.register .card,
+.login .card,
+.manage .card,
+.reset-password .card,
+.forgot-password .card {
+    background: #fff;
+    border-radius: 1.25rem;
+    box-shadow: 0 8px 32px rgba(142, 68, 173, 0.13), 0 1.5px 8px rgba(67, 97, 238, 0.08);
+    border: 1.5px solid rgba(142, 68, 173, 0.18);
+    backdrop-filter: blur(8px);
+    padding: 2.5rem 2rem 2rem 2rem;
+    max-width: 540px;
+    width: 100%;
+    min-height: 70vh;
+    height: 75vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: box-shadow 0.2s, height 0.2s;
+}
+
+/* Manage Account Layout for card with updated dimensions */
+.manage .card {
+    max-width: 900px;
+    background: #fff;
+    min-height: 70vh;
+    height: 75vh;
+    padding: 2.5rem 2.5rem 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: auto;
+    margin: 0 auto;
+}
+
+/* Headings */
+.account h1, .register h1, .login h1, .manage h1,
+.account h2, .register h2, .login h2, .manage h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #8e44ad; /* updated to match landing page purple */
+    margin-bottom: 1.2rem;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.account h2, .register h2, .login h2, .manage h2 {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #6c3483;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+
+/* Labels */
+.account label, .register label, .login label, .manage label {
+    font-weight: 500;
+    color: #6c3483;
+    margin-bottom: 0.3rem;
+}
+
+/* Inputs */
+.account input[type="text"],
+.account input[type="email"],
+account input[type="password"],
+.register input[type="text"],
+.register input[type="email"],
+.register input[type="password"],
+.login input[type="text"],
+.login input[type="email"],
+.login input[type="password"],
+.manage input[type="text"],
+.manage input[type="email"],
+.manage input[type="password"] {
+    border-radius: 0.8rem;
+    border: 1.5px solid #d1a4f8;
+    padding: 0.7rem 1rem;
+    font-size: 1.08rem;
+    margin-bottom: 1.1rem;
+    background: rgba(255,255,255,0.7);
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+.account input:focus,
+.register input:focus,
+.login input:focus,
+.manage input:focus {
+    border-color: #8e44ad; /* updated to match landing page purple */
+    box-shadow: 0 0 0 2px #e0c3fc;
+    outline: none;
+}
+
+/* Buttons */
+.account .btn, .register .btn, .login .btn, .manage .btn {
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.08rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    padding: 0.7rem 0;
+    box-shadow: 0 2px 8px rgba(142, 68, 173, 0.10); /* updated to match landing page purple */
+    transition: background 0.2s, color 0.2s, border 0.2s, box-shadow 0.2s;
+    letter-spacing: 0.03em;
+}
+
+.account .btn-primary, .register .btn-primary, .login .btn-primary, .manage .btn-primary {
+    background: linear-gradient(90deg, #8e44ad 0%, #6c3483 100%);
+    border: none;
+    color: #fff;
+}
+
+    .account .btn-primary:hover, .register .btn-primary:hover, .login .btn-primary:hover, .manage .btn-primary:hover {
+        background: linear-gradient(90deg, #6c3483 0%, #8e44ad 100%);
+        color: #fff;
+    }
+
+.account .btn-outline-primary, .register .btn-outline-primary, .login .btn-outline-primary, .manage .btn-outline-primary {
+    color: #8e44ad; /* updated to match landing page purple */
+    border: 2px solid #8e44ad;
+    background: #fff;
+}
+
+    .account .btn-outline-primary:hover, .register .btn-outline-primary:hover, .login .btn-outline-primary:hover, .manage .btn-outline-primary:hover {
+        background: #8e44ad;
+        color: #fff;
+        border-color: #8e44ad;
+    }
+
+/* Validation */
+.account .validation-summary-errors,
+.register .validation-summary-errors,
+.login .validation-summary-errors,
+.manage .validation-summary-errors {
+    background: #fbeafc;
+    color: #c0398f;
+    border: 1px solid #c0398f;
+    border-radius: 0.7rem;
+    padding: 0.7rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+/* Checkbox */
+.account .form-check-label,
+.register .form-check-label,
+.login .form-check-label,
+.manage .form-check-label {
+    font-size: 1rem;
+    color: #6c3483;
+}
+
+.account .form-check-input,
+.register .form-check-input,
+.login .form-check-input,
+.manage .form-check-input {
+    border-radius: 0.4rem;
+    border: 1.5px solid #d1a4f8;
+    margin-right: 0.5rem;
+    background: #f8fafc;
+}
+
+    .account .form-check-input:checked,
+    .register .form-check-input:checked,
+    .login .form-check-input:checked,
+    .manage .form-check-input:checked {
+        background-color: #8e44ad; /* updated to match landing page purple */
+        border-color: #8e44ad;
+    }
+
+/* Links */
+.account a, .register a, .login a, .manage a {
+    color: #6c3483;
+    text-decoration: none;
+    transition: color 0.15s;
+}
+
+    .account a:hover, .register a:hover, .login a:hover, .manage a:hover {
+        color: #8e44ad; /* updated to match landing page purple */
+        text-decoration: underline;
+    }
+
+/* Manage Account Layout */
+.manage .card {
+    max-width: 900px;
+    background: #fff;
+    min-height: 70vh;
+    height: 75vh;
+    padding: 2.5rem 2.5rem 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: auto;
+    margin: 0 auto;
+}
+
+.manage h1 {
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: #8e44ad; /* updated to match landing page purple */
+    margin-bottom: 0.5rem;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.manage h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #6c3483;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+
+.manage hr {
+    margin: 1.5rem 0 2rem 0;
+    border-top: 2px solid #e0c3fc;
+}
+
+.manage .row {
+    margin: 0;
+}
+
+.manage .col-md-3 {
+    padding-right: 2rem;
+    border-right: 1.5px solid #e0c3fc;
+}
+
+.manage .col-md-9 {
+    padding-left: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+    .account .card,
+    .register .card,
+    .login .card,
+    .reset-password .card,
+    .forgot-password .card {
+        max-width: 98vw;
+        min-height: 400px;
+        height: 400px;
+    }
+
+    .manage .card {
+        padding: 1.2rem 0.5rem;
+        border-radius: 1rem;
+        min-height: 400px;
+        height: 400px;
+        max-width: 98vw;
+    }
+
+    .manage .col-md-3 {
+        border-right: none;
+        border-bottom: 1.5px solid #e0c3fc;
+        padding-right: 0;
+        padding-bottom: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .manage .col-md-9 {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .account .card,
+    .register .card,
+    .login .card,
+    .manage .card,
+    .reset-password .card,
+    .forgot-password .card {
+        padding: 0.7rem 0.2rem;
+        border-radius: 1rem;
+        min-height: 0;
+        height: auto;
+    }
+
+    .account h1, .register h1, .login h1, .manage h1 {
+        font-size: 1.3rem;
+    }
+
+    .manage h1 {
+        font-size: 1.3rem;
+    }
+
+    .manage h2 {
+        font-size: 1rem;
+    }
+}

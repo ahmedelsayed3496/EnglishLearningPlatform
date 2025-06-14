@@ -1,0 +1,67 @@
+﻿@model IEnumerable<EnglishLearningPlatform.Models.Flashcard>
+@{
+    ViewData["Title"] = "My Flashcards";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<a class="btn btn-primary mb-3" asp-action="Create">Add New Flashcard</a>
+
+@if (!Model.Any())
+{
+    <p>You haven't saved any flashcards yet.</p>
+}
+else
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Word</th>
+                <th>Meaning</th>
+                <th>Example</th>
+                <th>Created At</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var flashcard in Model)
+            {
+                <tr>
+                    <td>@flashcard.Word</td>
+                    <td>@flashcard.Meaning</td>
+                    <td>@flashcard.ExampleSentence</td>
+                    <td>@flashcard.CreatedAt</td>
+                    <td>
+                        <form asp-action="Delete" asp-route-id="@flashcard.FlashcardId" method="post" class="delete-form" style="display:inline;">
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.querySelectorAll('.delete-form').forEach(form => {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: "Do you want to delete this flashcard?",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#d33',
+                    cancelButtonColor: '#3085d6',
+                    confirmButtonText: 'Yes, delete it!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        form.submit();
+                    }
+                });
+            });
+        });
+    </script>
+}

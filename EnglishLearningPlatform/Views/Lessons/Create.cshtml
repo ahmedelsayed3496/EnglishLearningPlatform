@@ -1,0 +1,129 @@
+﻿@{
+    ViewData["Title"] = "Create Lesson";
+    Layout = "_LessonLayout";
+}
+
+<div class="container py-4">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="lesson-create-card">
+                <h2>Create a Lesson</h2>
+
+                <form asp-action="Create" enctype="multipart/form-data" method="post">
+                    <div class="lesson-form-group">
+                        <label for="title" class="form-label fw-semibold">Lesson Title</label>
+                        <input type="text" class="form-control" name="title" id="title" required
+                               placeholder="Enter a descriptive title for your lesson" />
+                    </div>
+
+                    <div class="lesson-form-group">
+                        <label class="form-label fw-semibold">Choose file type:</label>
+                        <div>
+                            <div class="lesson-form-check">
+                                <input type="radio" id="textOption" name="fileType" value="text" checked />
+                                <label for="textOption">Text File (.txt)</label>
+                            </div>
+                            <div class="lesson-form-check">
+                                <input type="radio" id="audioOption" name="fileType" value="audio" />
+                                <label for="audioOption">Audio File (.wav)</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lesson-form-group" id="textFileGroup">
+                        <label for="textFile" class="form-label">Upload Text File</label>
+                        <input type="file" class="form-control" id="textFile" name="uploadedFile" accept=".txt" />
+                        <small class="lesson-form-help">Upload a .txt file with your lesson content</small>
+                    </div>
+
+                    <div class="lesson-form-group" id="audioFileGroup" style="display:none;">
+                        <label for="audioFile" class="form-label">Upload Audio File</label>
+                        <input type="file" class="form-control" id="audioFile" name="uploadedFile" accept=".wav,audio/wav" />
+                        <small class="lesson-form-help">Upload a .wav file for speech-to-text processing</small>
+                    </div>
+
+                    <!-- New: Lesson image upload section -->
+                    <div class="lesson-form-group">
+                        <label for="lessonImage" class="form-label fw-semibold">Lesson Cover Image (Optional)</label>
+                        <input type="file" class="form-control" id="lessonImage" name="lessonImage" accept="image/*" />
+                        <small class="lesson-form-help">Recommended size: 400x250 pixels. If no image is provided, a default cover will be used.</small>
+
+                        <div class="mt-3">
+                            <div class="lesson-form-check">
+                                <input class="form-check-input" type="checkbox" id="useDefaultImage" name="useDefaultImage">
+                                <label class="form-check-label" for="useDefaultImage">Use default image instead</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lesson-form-buttons">
+                        <a asp-action="Index" class="lesson-btn lesson-btn-outline">Back to Lessons</a>
+                        <button type="submit" class="lesson-btn lesson-btn-primary">Generate Lesson</button>
+                    </div>
+                </form>
+
+                @if (!ViewData.ModelState.IsValid)
+                {
+                    <div class="alert alert-danger mt-3">
+                        @Html.ValidationSummary()
+                    </div>
+                }
+
+                <div class="lesson-form-alert mt-4">
+                    <h5><i class="bi bi-lightbulb"></i> Tips for creating effective lessons</h5>
+                    <ul class="mb-0">
+                        <li>Choose content that's interesting and relevant to your learning goals</li>
+                        <li>For text files, aim for 200-1000 words for optimal learning</li>
+                        <li>For audio files, ensure clear pronunciation for better speech recognition</li>
+                        <li>Adding a custom cover image helps you identify your lessons quickly</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Handle file type toggle
+        document.getElementById('textOption').addEventListener('change', function () {
+            if (this.checked) {
+                document.getElementById('textFileGroup').style.display = '';
+                document.getElementById('audioFileGroup').style.display = 'none';
+                document.getElementById('audioFile').value = '';
+            }
+        });
+
+        document.getElementById('audioOption').addEventListener('change', function () {
+            if (this.checked) {
+                document.getElementById('textFileGroup').style.display = 'none';
+                document.getElementById('audioFileGroup').style.display = '';
+                document.getElementById('textFile').value = '';
+            }
+        });
+
+        // Handle default image checkbox
+        document.getElementById('useDefaultImage').addEventListener('change', function() {
+            const imageInput = document.getElementById('lessonImage');
+            imageInput.disabled = this.checked;
+            if (this.checked) {
+                imageInput.value = '';
+            }
+        });
+
+        // Ensure only one file input is required at a time
+        document.querySelector('form').addEventListener('submit', function (e) {
+            var textVisible = document.getElementById('textFileGroup').style.display !== 'none';
+            var textFile = document.getElementById('textFile').files.length;
+            var audioFile = document.getElementById('audioFile').files.length;
+            if (textVisible && !textFile) {
+                e.preventDefault();
+                alert('Please upload a text file.');
+            }
+            if (!textVisible && !audioFile) {
+                e.preventDefault();
+                alert('Please upload an audio file.');
+            }
+        });
+    </script>
+}

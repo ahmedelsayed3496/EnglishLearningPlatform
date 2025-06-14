@@ -1,0 +1,237 @@
+﻿@model EnglishLearningPlatform.Models.Lesson
+
+@{
+    ViewData["Title"] = "Lesson Details";
+    var words = Model.TextContent.Split(' ');
+    Layout = "_LessonLayout";
+}
+
+<input type="hidden" id="lesson-id" value="@Model.LessonId" />
+<div class="lesson-container d-flex flex-column align-items-center justify-content-center">
+    <h2 class="mb-3 text-center">@Model.Title</h2>
+
+    <div class="lesson-audio-player">
+        <div class="audio-progress-container">
+            <div class="audio-progress-bar" style="width: 0%"></div>
+        </div>
+        <div class="audio-progress-label">
+            <div class="audio-time-indicator">
+                <i class="bi bi-headphones"></i>
+                <span class="audio-current-time">00:00</span> / <span class="audio-total-time">00:00</span>
+            </div>
+            <span class="audio-progress-percentage">0%</span>
+        </div>
+
+        <audio class="lesson-audio" controls>
+            <source src="@Model.AudioFilePath" type="audio/mp3" />
+            Your browser does not support the audio element.
+        </audio>
+
+        <div class="audio-controls">
+            <button class="audio-play-pause">
+                <i class="bi bi-play-fill"></i>
+            </button>
+            <span class="ms-2 text-muted">Click to play/pause the lesson audio</span>
+        </div>
+    </div>
+
+    <div class="lesson-reader-card card shadow">
+        <div class="card-body p-4 w-100 h-100 d-flex flex-column justify-content-between position-relative">
+            <div id="lesson-text" class="lesson-content fs-4 flex-grow-1"></div>
+            <div class="lesson-navigation d-flex justify-content-center align-items-center mt-3">
+                <button id="prevPageBtn" class="btn btn-outline-primary me-2" disabled>Previous</button>
+                <span id="pageIndicator" class="mx-2"></span>
+                <button id="nextPageBtn" class="btn btn-outline-primary ms-2">Next</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@Html.AntiForgeryToken()
+
+@section Scripts {
+    <script src="~/js/audio-progress.js"></script>
+    <!-- Keep your existing script for text display -->
+    <script>
+        // SweetAlert2 is already included in _Layout.cshtml
+
+        const words = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(words));
+        let pages = [];
+        let currentPage = 0;
+        let selectedWord = '';
+        let selectedDefinition = '';
+        let selectedExample = '';
+
+        function wordSpan(word) {
+            return `<span class='clickable-word' data-word='${word.replace(/'/g, '&#39;')}'>${word}</span>`;
+        }
+
+        function paginateWords() {
+            pages = [];
+            const container = document.getElementById('lesson-text');
+            if (!container) return;
+
+            const measureDiv = document.createElement('div');
+            measureDiv.style.position = 'absolute';
+            measureDiv.style.visibility = 'hidden';
+            measureDiv.style.width = container.offsetWidth + 'px';
+            measureDiv.style.fontSize = window.getComputedStyle(container).fontSize;
+            measureDiv.style.fontFamily = window.getComputedStyle(container).fontFamily;
+            measureDiv.style.whiteSpace = 'pre-wrap';
+            measureDiv.style.lineHeight = window.getComputedStyle(container).lineHeight;
+            measureDiv.style.padding = window.getComputedStyle(container).padding;
+            measureDiv.style.boxSizing = 'border-box';
+            document.body.appendChild(measureDiv);
+
+            let page = [];
+            let tempHtml = '';
+            let i = 0;
+            while (i < words.length) {
+                let testHtml = tempHtml + (tempHtml ? ' ' : '') + wordSpan(words[i]);
+                measureDiv.innerHTML = testHtml;
+                if (measureDiv.offsetHeight > container.offsetHeight && page.length > 0) {
+                    pages.push(page.slice());
+                    page = [];
+                    tempHtml = '';
+                } else {
+                    page.push(words[i]);
+                    tempHtml = testHtml;
+                    i++;
+                }
+            }
+            if (page.length > 0) pages.push(page);
+
+            document.body.removeChild(measureDiv);
+        }
+
+        function renderPage(pageIdx) {
+            const container = document.getElementById('lesson-text');
+            if (!container || !pages[pageIdx]) return;
+            container.innerHTML = pages[pageIdx].map(wordSpan).join(' ');
+            document.getElementById('pageIndicator').textContent = `Page ${pageIdx + 1} of ${pages.length}`;
+            document.getElementById('prevPageBtn').disabled = pageIdx === 0;
+            document.getElementById('nextPageBtn').disabled = pageIdx === pages.length - 1;
+            attachWordClickHandlers();
+        }
+
+        function attachWordClickHandlers() {
+            document.querySelectorAll('.clickable-word').forEach(function(span) {
+                span.addEventListener('click', function(e) {
+                    let word = this.getAttribute('data-word').replace(/[^a-zA-Z]/g, '');
+                    if (!word) return;
+                    selectedWord = word;
+                    fetchDefinitionAndShowSweetAlert(word, span);
+                });
+            });
+        }
+
+        function fetchDefinitionAndShowSweetAlert(word, span) {
+            fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
+                .then(response => response.json())
+                .then(data => {
+                    let definition = "No definition found.";
+                    let example = "";
+                    if (Array.isArray(data) && data[0]?.meanings?.[0]?.definitions?.[0]) {
+                        const defObj = data[0].meanings[0].definitions[0];
+                        if (defObj.definition) definition = defObj.definition;
+                        if (defObj.example) example = defObj.example;
+                    }
+                    selectedDefinition = definition;
+                    selectedExample = example;
+                    showDefinitionSweetAlert(word, definition, example);
+                })
+                .catch(() => {
+                    selectedDefinition = '';
+                    selectedExample = '';
+                    showDefinitionSweetAlert(word, "Definition not found.", "");
+                });
+        }
+
+        function showDefinitionSweetAlert(word, definition, example) {
+            let html = `<b>${word}</b>: ${definition}`;
+            if (example) {
+                html += `<div class="mt-2"><em>Example:</em> <span class="fst-italic">${example}</span></div>`;
+            }
+            Swal.fire({
+                title: word,
+                html: html,
+                showCancelButton: true,
+                confirmButtonText: 'Create Flashcard',
+                cancelButtonText: 'Close',
+                focusConfirm: false,
+                position: 'top', // You can use 'center', 'top-end', etc.
+                customClass: {
+                    popup: 'swal2-definition-popup'
+                }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    createFlashcard(selectedWord, selectedDefinition, selectedExample);
+                }
+            });
+        }
+
+        function createFlashcard(word, meaning, exampleSentence) {
+            fetch('/Flashcards/CreateAjax', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]')?.value
+                },
+                body: JSON.stringify({
+                    Word: word,
+                    Meaning: meaning,
+                    ExampleSentence: exampleSentence,
+                    LessonId: @Model.LessonId
+                })
+            })
+            .then(response => {
+                if (response.ok) {
+                    showSweetAlert('Flashcard created!', true);
+                } else {
+                    showSweetAlert('Error creating flashcard.', false);
+                }
+            })
+            .catch(() => {
+                showSweetAlert('Error creating flashcard.', false);
+            });
+        }
+
+        function showSweetAlert(message, success) {
+            Swal.fire({
+                icon: success ? 'success' : 'error',
+                title: success ? 'Success' : 'Error',
+                text: message,
+                timer: 1500,
+                showConfirmButton: false,
+                position: 'top-end'
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                paginateWords();
+                renderPage(currentPage);
+
+                document.getElementById('prevPageBtn').addEventListener('click', function() {
+                    if (currentPage > 0) {
+                        currentPage--;
+                        renderPage(currentPage);
+                    }
+                });
+                document.getElementById('nextPageBtn').addEventListener('click', function() {
+                    if (currentPage < pages.length - 1) {
+                        currentPage++;
+                        renderPage(currentPage);
+                    }
+                });
+
+                window.addEventListener('resize', function() {
+                    const prevPage = currentPage;
+                    paginateWords();
+                    currentPage = Math.min(prevPage, pages.length - 1);
+                    renderPage(currentPage);
+                });
+            }, 100);
+        });
+    </script>
+}

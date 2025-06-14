@@ -1,0 +1,71 @@
+﻿@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <h1 class="mb-4">Contact Us</h1>
+            <p class="lead mb-4">Have questions about Lesson Tailor? We're here to help!</p>
+
+            <div class="card shadow-sm border-0 p-4 mb-4">
+                <form asp-action="SendMessage" asp-controller="Home" method="post">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter subject" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-md-4 mb-3">
+                    <div class="d-flex align-items-center">
+                        <div class="me-3">
+                            <i class="bi bi-geo-alt text-primary" style="font-size: 2rem;"></i>
+                        </div>
+                        <div>
+                            <h5>Our Address</h5>
+                            <p class="mb-0">123 Learning Street<br>Education City, ED 12345</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="d-flex align-items-center">
+                        <div class="me-3">
+                            <i class="bi bi-envelope text-primary" style="font-size: 2rem;"></i>
+                        </div>
+                        <div>
+                            <h5>Email Us</h5>
+                            <p class="mb-0">info@lessontailor.com<br>support@lessontailor.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="d-flex align-items-center">
+                        <div class="me-3">
+                            <i class="bi bi-telephone text-primary" style="font-size: 2rem;"></i>
+                        </div>
+                        <div>
+                            <h5>Call Us</h5>
+                            <p class="mb-0">(555) 123-4567<br>(555) 987-6543</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

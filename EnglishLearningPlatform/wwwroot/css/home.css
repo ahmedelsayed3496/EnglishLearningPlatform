@@ -1,0 +1,491 @@
+﻿/* home.css - Styles for the home page with improved sections */
+
+/* Enable smooth scrolling for entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section styling for page sections - reduced height */
+.fullpage-section {
+    min-height: 85vh; /* Reduced from 100vh */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding: 3rem 0;
+    scroll-margin-top: 70px; /* Adjust based on navbar height */
+}
+
+/* Hero Section - With purple gradient background */
+.hero-section {
+    position: relative;
+    min-height: 80vh; /* Reduced from 100vh - 70px */
+    background: linear-gradient(180deg, rgba(76, 29, 149, 0.15) 0%, rgba(124, 58, 237, 0.08) 50%, rgba(255, 255, 255, 0) 100%);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 0 0 2rem 2rem;
+    z-index: 1;
+    padding: 0;
+}
+
+    .hero-section::before {
+        content: '';
+        position: absolute;
+        top: -10%;
+        right: -5%;
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        background: rgba(124, 58, 237, 0.08);
+        z-index: -1;
+    }
+
+    .hero-section::after {
+        content: '';
+        position: absolute;
+        bottom: -10%;
+        left: -5%;
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        background: rgba(139, 92, 246, 0.05);
+        z-index: -1;
+    }
+
+    .hero-section .container {
+        z-index: 2;
+        padding: 3rem 0;
+    }
+
+    .hero-section h1 {
+        font-size: 3rem;
+        line-height: 1.2;
+        margin-bottom: 1.25rem;
+        color: #212529; /* Changed to black text color */
+    }
+
+    .hero-section p {
+        font-size: 1.1rem;
+        color: #212529; /* Changed to black text color */
+        margin-bottom: 1.75rem;
+    }
+
+    /* Custom hero section buttons */
+    .hero-section .btn-primary {
+        background-color: var(--primary);
+        border-color: var(--primary);
+        color: white;
+        padding: 0.75rem 1.75rem;
+        transition: all 0.3s ease;
+    }
+
+        .hero-section .btn-primary:hover {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+    .hero-section .btn-outline-primary {
+        color: var(--primary);
+        border-color: var(--primary);
+        padding: 0.75rem 1.75rem;
+        background: transparent;
+        transition: all 0.3s ease;
+    }
+
+        .hero-section .btn-outline-primary:hover {
+            color: white;
+            background-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+.hero-img {
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.5s ease;
+    transform: perspective(1000px) rotateY(-5deg);
+    max-width: 100%;
+    height: auto;
+}
+
+    .hero-img:hover {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+
+/* Scroll indicator - Positioned higher up */
+.scroll-indicator {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+    .scroll-indicator:hover {
+        opacity: 1;
+    }
+
+    .scroll-indicator span {
+        display: block;
+        width: 25px;
+        height: 25px;
+        border-right: 2px solid var(--primary-dark);
+        border-bottom: 2px solid var(--primary-dark);
+        transform: rotate(45deg);
+        animation: scroll-indicator 2s infinite;
+        margin: -10px 0;
+    }
+
+        .scroll-indicator span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+@keyframes scroll-indicator {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+}
+
+/* Section transition - Creates smooth fade from purple to white */
+.section-divider {
+    height: 4rem;
+    background: linear-gradient(180deg, rgba(124, 58, 237, 0.03) 0%, rgba(255, 255, 255, 1) 100%);
+    margin-top: -2rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Features Section - IMPROVED */
+.features-section {
+    padding: 5rem 0;
+    background-color: #ffffff;
+    position: relative;
+    z-index: 1;
+    margin-top: 0; /* Reset margin since we now have gradient divider */
+}
+
+    .features-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--primary), var(--accent));
+        opacity: 0.3;
+        display: none; /* Hide since we have gradient divider */
+    }
+
+.features-title {
+    font-size: 2.25rem;
+    margin-bottom: 0.75rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.75rem;
+    color: #212529; /* Changed to black text color */
+}
+
+    .features-title::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 70px;
+        height: 3px;
+        background-color: var(--accent);
+        transform: translateX(-50%);
+        border-radius: 3px;
+    }
+
+.features-subtitle {
+    font-size: 1.1rem;
+    color: #495057; /* Darker color for better readability */
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Feature cards with visible border */
+.feature-card {
+    height: 100%;
+    border: 1px solid rgba(124, 58, 237, 0.15); /* Subtle purple border */
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    padding: 1.75rem;
+    background-color: white;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(124, 58, 237, 0.03);
+}
+
+    .feature-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-lg);
+        border-color: rgba(124, 58, 237, 0.3); /* Darker border on hover */
+    }
+
+    .feature-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary), var(--accent));
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .feature-card:hover::before {
+        opacity: 1;
+    }
+
+.feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(124, 58, 237, 0.1); /* Matching purple theme */
+    margin: 0 auto 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    background-color: var(--primary);
+}
+
+.feature-icon i {
+    font-size: 2.25rem;
+    color: var(--primary);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-icon i {
+    color: white;
+}
+
+.feature-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+    color: #212529; /* Changed to black text color */
+}
+
+.feature-card p {
+    color: #495057; /* Darker color for better readability */
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* CTA Section - IMPROVED */
+.cta-section {
+    position: relative;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+    .cta-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        z-index: 0;
+        opacity: 0.8;
+    }
+
+.cta-content {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    border-radius: 1.5rem;
+    padding: 3.5rem;
+    margin: 3rem 0;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border: 1px solid rgba(124, 58, 237, 0.2); /* Subtle border */
+}
+
+    .cta-content::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 60%);
+        z-index: -1;
+    }
+
+    .cta-content h2 {
+        font-size: 2.25rem;
+        color: white;
+        margin-bottom: 1rem;
+    }
+
+.cta-text {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-section .btn-light {
+    color: var(--primary);
+    font-weight: var(--font-weight-medium);
+    padding: 0.75rem 2rem;
+    border-radius: var(--border-radius-md);
+    transition: var(--transition-base);
+    box-shadow: var(--shadow-md);
+}
+
+    .cta-section .btn-light:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+/* Create a gap between sections for more distinct separation */
+.features-section + .section-divider {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.95) 100%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .fullpage-section {
+        min-height: auto;
+        padding: 3rem 0;
+    }
+
+    .hero-section {
+        min-height: auto;
+        padding: 3rem 0;
+    }
+
+        .hero-section h1 {
+            font-size: 2.25rem;
+        }
+
+        .hero-section p {
+            font-size: 1.05rem;
+        }
+
+    .hero-img {
+        margin-top: 2rem;
+        transform: none;
+    }
+
+    .features-section {
+        padding: 3rem 0;
+    }
+
+    .features-title {
+        font-size: 1.85rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .features-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-content {
+        padding: 2.5rem;
+        margin: 2rem 0;
+    }
+
+        .cta-content h2 {
+            font-size: 1.85rem;
+        }
+
+    .cta-text {
+        font-size: 1rem;
+    }
+
+    .section-divider {
+        height: 2rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero-section {
+        text-align: center;
+        padding: 2.5rem 0;
+    }
+
+        .hero-section h1 {
+            font-size: 1.85rem;
+        }
+
+        .hero-section .d-flex {
+            justify-content: center;
+        }
+
+    .features-section {
+        padding: 2.5rem 0;
+    }
+
+    .features-title {
+        font-size: 1.65rem;
+    }
+
+    .features-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .feature-card {
+        margin-bottom: 1.25rem;
+    }
+
+    .cta-content {
+        padding: 2rem;
+        margin: 1.5rem 0;
+    }
+
+        .cta-content h2 {
+            font-size: 1.65rem;
+        }
+
+    .cta-text {
+        font-size: 0.95rem;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+
+    .section-divider {
+        height: 1.5rem;
+    }
+}
+
+/* Fix for fixed navbar */
+@media (min-width: 992px) {
+    .hero-section {
+        padding-top: 2rem;
+    }
+}
