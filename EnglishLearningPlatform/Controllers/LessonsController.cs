@@ -73,6 +73,7 @@ namespace EnglishLearningPlatform.Controllers
             return View();
         }
 
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(IFormFile uploadedFile, IFormFile lessonImage, string title)
@@ -86,6 +87,7 @@ namespace EnglishLearningPlatform.Controllers
             var user = await _userManager.GetUserAsync(User);
             string textContent = "";
             string audioRelativePath = "";
+            string wordTimingsJson = null;
             string imageRelativePath = "/images/default-lesson.jpg"; // Default image path
             string fileName = Guid.NewGuid().ToString();
             var ext = Path.GetExtension(uploadedFile.FileName).ToLowerInvariant();
@@ -93,14 +95,17 @@ namespace EnglishLearningPlatform.Controllers
             // Process text file or audio file
             if (ext == ".txt")
             {
-                // Handle text file: read text and generate audio
+                // Handle text file: read text and generate audio with timings
                 using (var reader = new StreamReader(uploadedFile.OpenReadStream()))
                 {
                     textContent = await reader.ReadToEndAsync();
                 }
                 try
                 {
-                    audioRelativePath = await _textToSpeechService.GenerateAudioFromTextAsync(textContent, fileName);
+                    // Use the enhanced method to get both audio path and word timings
+                    var (audioPath, timings) = await _textToSpeechService.GenerateAudioWithTimingsAsync(textContent, fileName);
+                    audioRelativePath = audioPath;
+                    wordTimingsJson = timings;
                 }
                 catch (Exception ex)
                 {
@@ -135,6 +140,11 @@ namespace EnglishLearningPlatform.Controllers
                 try
                 {
                     textContent = await _speechToTextService.RecognizeSpeechAsync(wavPath);
+
+                    // For audio uploads, we don't have precise word timing information
+                    // You could estimate it by dividing the audio length by the number of words
+                    // This is just a placeholder for potential future enhancement
+                    wordTimingsJson = null;
                 }
                 catch (Exception ex)
                 {
@@ -178,7 +188,8 @@ namespace EnglishLearningPlatform.Controllers
                 TextContent = textContent,
                 AudioFilePath = audioRelativePath,
                 ImagePath = imageRelativePath,
-                UserId = user.Id
+                UserId = user.Id,
+                WordTimingsJson = wordTimingsJson // Store the word timings JSON
             };
 
             _context.Lessons.Add(lesson);

@@ -3,13 +3,31 @@
 @{
     ViewData["Title"] = "Lesson Details";
     var words = Model.TextContent.Split(' ');
-    Layout = "_LessonLayout";
+    Layout = "_LessonDetailsLayout"; //
 }
 
-<input type="hidden" id="lesson-id" value="@Model.LessonId" />
-<div class="lesson-container d-flex flex-column align-items-center justify-content-center">
-    <h2 class="mb-3 text-center">@Model.Title</h2>
+@section Styles {
+    <link rel="stylesheet" href="~/css/lesson.details.css" asp-append-version="true" />
+}
 
+
+<input type="hidden" id="lesson-id" value="@Model.LessonId" />
+<div class="lesson-container">
+    <h2 class="mb-4 text-center">@Model.Title</h2>
+
+    <!-- Text reader card (fixed size) -->
+    <div class="lesson-reader-card card">
+        <div class="card-body">
+            <div id="lesson-text" class="lesson-content"></div>
+            <div class="lesson-navigation">
+                <button id="prevPageBtn" class="btn btn-outline-primary me-3 px-4" disabled>Previous</button>
+                <span id="pageIndicator" class="mx-3"></span>
+                <button id="nextPageBtn" class="btn btn-outline-primary ms-3 px-4">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio player (below text) -->
     <div class="lesson-audio-player">
         <div class="audio-progress-container">
             <div class="audio-progress-bar" style="width: 0%"></div>
@@ -31,18 +49,6 @@
             <button class="audio-play-pause">
                 <i class="bi bi-play-fill"></i>
             </button>
-            <span class="ms-2 text-muted">Click to play/pause the lesson audio</span>
-        </div>
-    </div>
-
-    <div class="lesson-reader-card card shadow">
-        <div class="card-body p-4 w-100 h-100 d-flex flex-column justify-content-between position-relative">
-            <div id="lesson-text" class="lesson-content fs-4 flex-grow-1"></div>
-            <div class="lesson-navigation d-flex justify-content-center align-items-center mt-3">
-                <button id="prevPageBtn" class="btn btn-outline-primary me-2" disabled>Previous</button>
-                <span id="pageIndicator" class="mx-2"></span>
-                <button id="nextPageBtn" class="btn btn-outline-primary ms-2">Next</button>
-            </div>
         </div>
     </div>
 </div>
@@ -51,23 +57,108 @@
 
 @section Scripts {
     <script src="~/js/audio-progress.js"></script>
-    <!-- Keep your existing script for text display -->
     <script>
-        // SweetAlert2 is already included in _Layout.cshtml
-
+        // Text display script
         const words = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(words));
         let pages = [];
+        let sentences = [];
         let currentPage = 0;
         let selectedWord = '';
         let selectedDefinition = '';
         let selectedExample = '';
+        let activeBubble = null; // Track current bubble
 
-        function wordSpan(word) {
-            return `<span class='clickable-word' data-word='${word.replace(/'/g, '&#39;')}'>${word}</span>`;
+        // Create array to store sentence information
+        let sentenceTimings = [];
+
+        // Define sentence ending characters
+        const sentenceEndChars = ['.', '!', '?', ':', ';'];
+
+        // Group words into sentences
+        function groupWordsIntoSentences(words) {
+            let sentences = [];
+            let currentSentence = [];
+            let totalDuration = 0; // Estimated duration in ms
+
+            // Estimate audio duration in ms (for basic synchronization)
+            const audioElement = document.querySelector('.lesson-audio');
+            let audioDuration = audioElement ? audioElement.duration * 1000 : 0;
+
+            // If we don't have audio duration yet, use a reasonable estimate
+            if (!audioDuration) {
+                audioDuration = words.length * 280; // Avg 280ms per word
+            }
+
+            // Roughly estimate words per second based on total words and duration
+            const msPerWord = audioDuration / words.length;
+
+            for (let i = 0; i < words.length; i++) {
+                const word = words[i];
+                currentSentence.push(word);
+
+                // Check if this word ends with a sentence-ending character
+                const lastChar = word.charAt(word.length - 1);
+                if (sentenceEndChars.includes(lastChar) || i === words.length - 1) {
+                    // If sentence ended or this is the last word
+                    const sentenceText = currentSentence.join(' ');
+                    const wordCount = currentSentence.length;
+
+                    // Calculate approximate timing (start and end time)
+                    const startTime = totalDuration;
+                    const duration = wordCount * msPerWord;
+                    totalDuration += duration;
+
+                    sentences.push({
+                        words: currentSentence,
+                        text: sentenceText,
+                        startTimeMs: startTime,
+                        endTimeMs: totalDuration
+                    });
+
+                    currentSentence = [];
+                }
+            }
+
+            // If any remaining words, add as a sentence
+            if (currentSentence.length > 0) {
+                const sentenceText = currentSentence.join(' ');
+                const wordCount = currentSentence.length;
+
+                const startTime = totalDuration;
+                const duration = wordCount * msPerWord;
+                totalDuration += duration;
+
+                sentences.push({
+                    words: currentSentence,
+                    text: sentenceText,
+                    startTimeMs: startTime,
+                    endTimeMs: totalDuration
+                });
+            }
+
+            return sentences;
+        }
+
+        function wordSpan(word, index) {
+            return `<span class='clickable-word' data-index="${index}" data-word='${word.replace(/'/g, '&#39;')}'>${word}</span>`;
+        }
+
+        function sentenceSpan(sentence, sentenceIndex) {
+            // Create spans for each word in the sentence
+            const wordSpans = sentence.words.map((word, i) => {
+                const globalIndex = sentences.slice(0, sentenceIndex)
+                    .reduce((acc, s) => acc + s.words.length, 0) + i;
+                return wordSpan(word, globalIndex);
+            }).join(' ');
+
+            // Wrap all words in a sentence span
+            return `<span class='sentence' data-sentence-index="${sentenceIndex}">${wordSpans}</span>`;
         }
 
         function paginateWords() {
             pages = [];
+            sentences = groupWordsIntoSentences(words);
+
             const container = document.getElementById('lesson-text');
             if (!container) return;
 
@@ -86,20 +177,26 @@
             let page = [];
             let tempHtml = '';
             let i = 0;
-            while (i < words.length) {
-                let testHtml = tempHtml + (tempHtml ? ' ' : '') + wordSpan(words[i]);
+
+            // Paginate by sentences instead of individual words
+            while (i < sentences.length) {
+                let testHtml = tempHtml + (tempHtml ? ' ' : '') + sentenceSpan(sentences[i], i);
                 measureDiv.innerHTML = testHtml;
+
                 if (measureDiv.offsetHeight > container.offsetHeight && page.length > 0) {
                     pages.push(page.slice());
                     page = [];
                     tempHtml = '';
                 } else {
-                    page.push(words[i]);
+                    page.push(sentences[i]);
                     tempHtml = testHtml;
                     i++;
                 }
             }
-            if (page.length > 0) pages.push(page);
+
+            if (page.length > 0) {
+                pages.push(page);
+            }
 
             document.body.removeChild(measureDiv);
         }
@@ -107,7 +204,20 @@
         function renderPage(pageIdx) {
             const container = document.getElementById('lesson-text');
             if (!container || !pages[pageIdx]) return;
-            container.innerHTML = pages[pageIdx].map(wordSpan).join(' ');
+
+            // Remove any active bubble before changing page
+            if (activeBubble) {
+                activeBubble.remove();
+                activeBubble = null;
+            }
+
+            // Render sentences on this page
+            container.innerHTML = pages[pageIdx].map((sentence, idx) => {
+                const sentenceIndex = pages.slice(0, pageIdx)
+                    .reduce((acc, p) => acc + p.length, 0) + idx;
+                return sentenceSpan(sentence, sentenceIndex);
+            }).join(' ');
+
             document.getElementById('pageIndicator').textContent = `Page ${pageIdx + 1} of ${pages.length}`;
             document.getElementById('prevPageBtn').disabled = pageIdx === 0;
             document.getElementById('nextPageBtn').disabled = pageIdx === pages.length - 1;
@@ -117,15 +227,35 @@
         function attachWordClickHandlers() {
             document.querySelectorAll('.clickable-word').forEach(function(span) {
                 span.addEventListener('click', function(e) {
+                    e.stopPropagation(); // Prevent clicks from propagating
+
                     let word = this.getAttribute('data-word').replace(/[^a-zA-Z]/g, '');
                     if (!word) return;
+
+                    // Remove any existing bubbles first
+                    if (activeBubble) {
+                        activeBubble.remove();
+                        activeBubble = null;
+                    }
+
                     selectedWord = word;
-                    fetchDefinitionAndShowSweetAlert(word, span);
+
+                    // Get position of the clicked word for bubble placement
+                    const rect = this.getBoundingClientRect();
+                    fetchDefinitionAndShowBubble(word, rect, this);
                 });
+            });
+
+            // Add click listener to document to close bubble when clicking elsewhere
+            document.addEventListener('click', function() {
+                if (activeBubble) {
+                    activeBubble.remove();
+                    activeBubble = null;
+                }
             });
         }
 
-        function fetchDefinitionAndShowSweetAlert(word, span) {
+        function fetchDefinitionAndShowBubble(word, position, wordElement) {
             fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
                 .then(response => response.json())
                 .then(data => {
@@ -138,35 +268,62 @@
                     }
                     selectedDefinition = definition;
                     selectedExample = example;
-                    showDefinitionSweetAlert(word, definition, example);
+                    showWordBubble(word, definition, example, position, wordElement);
                 })
                 .catch(() => {
                     selectedDefinition = '';
                     selectedExample = '';
-                    showDefinitionSweetAlert(word, "Definition not found.", "");
+                    showWordBubble(word, "Definition not found.", "", position, wordElement);
                 });
         }
 
-        function showDefinitionSweetAlert(word, definition, example) {
-            let html = `<b>${word}</b>: ${definition}`;
-            if (example) {
-                html += `<div class="mt-2"><em>Example:</em> <span class="fst-italic">${example}</span></div>`;
-            }
-            Swal.fire({
-                title: word,
-                html: html,
-                showCancelButton: true,
-                confirmButtonText: 'Create Flashcard',
-                cancelButtonText: 'Close',
-                focusConfirm: false,
-                position: 'top', // You can use 'center', 'top-end', etc.
-                customClass: {
-                    popup: 'swal2-definition-popup'
-                }
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    createFlashcard(selectedWord, selectedDefinition, selectedExample);
-                }
+        function showWordBubble(word, definition, example, position, wordElement) {
+            // Create comic-style speech bubble
+            const bubble = document.createElement('div');
+            bubble.className = 'word-bubble';
+
+            // Set position to appear above the word
+            const lessonText = document.getElementById('lesson-text');
+            const lessonTextRect = lessonText.getBoundingClientRect();
+
+            // Get coordinates relative to the lesson-text container
+            const bubbleTop = position.top - lessonTextRect.top - 150; // Position above the word
+            const bubbleLeft = position.left - lessonTextRect.left;
+
+            // Adjust position to ensure bubble stays within container
+            bubble.style.top = Math.max(10, bubbleTop) + 'px';
+            bubble.style.left = Math.max(10, Math.min(bubbleLeft, lessonTextRect.width - 310)) + 'px';
+
+            bubble.innerHTML = `
+                <div class="word-bubble-header">${word}</div>
+                <div class="word-bubble-body">${definition}</div>
+                ${example ? `<div class="word-bubble-example">"${example}"</div>` : ''}
+                <div class="word-bubble-actions">
+                    <button class="word-bubble-button">Add to Flashcards</button>
+                    <button class="word-bubble-button word-bubble-close">Close</button>
+                </div>
+            `;
+
+            // Prevent clicks inside the bubble from closing it
+            bubble.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+
+            // Add to lesson-text container (so position is relative to it)
+            lessonText.appendChild(bubble);
+            activeBubble = bubble;
+
+            // Handle close button click
+            bubble.querySelector('.word-bubble-close').addEventListener('click', function() {
+                bubble.remove();
+                activeBubble = null;
+            });
+
+            // Handle create flashcard button click
+            bubble.querySelector('.word-bubble-button:not(.word-bubble-close)').addEventListener('click', function() {
+                createFlashcard(selectedWord, selectedDefinition, selectedExample);
+                bubble.remove();
+                activeBubble = null;
             });
         }
 
@@ -186,25 +343,95 @@
             })
             .then(response => {
                 if (response.ok) {
-                    showSweetAlert('Flashcard created!', true);
+                    showToastMessage('Flashcard created!', 'success');
                 } else {
-                    showSweetAlert('Error creating flashcard.', false);
+                    showToastMessage('Error creating flashcard.', 'error');
                 }
             })
             .catch(() => {
-                showSweetAlert('Error creating flashcard.', false);
+                showToastMessage('Error creating flashcard.', 'error');
             });
         }
 
-        function showSweetAlert(message, success) {
-            Swal.fire({
-                icon: success ? 'success' : 'error',
-                title: success ? 'Success' : 'Error',
+        function showToastMessage(message, type) {
+            Toastify({
                 text: message,
-                timer: 1500,
-                showConfirmButton: false,
-                position: 'top-end'
+                duration: 3000,
+                gravity: "top",
+                position: "right",
+                className: "toast-notification",
+                style: {
+                    background: type === 'success'
+                        ? "linear-gradient(to right, #00b09b, #96c93d)"
+                        : "linear-gradient(to right, #ff5f6d, #ffc371)"
+                }
+            }).showToast();
+        }
+
+        // Function to highlight the current sentence based on audio time
+        function highlightCurrentSentence(currentTimeMs) {
+            // Remove highlight from all sentences
+            document.querySelectorAll('.sentence').forEach(el => {
+                el.classList.remove('current-sentence');
             });
+
+            // Find the current sentence based on audio time
+            for (let i = 0; i < sentences.length; i++) {
+                const sentence = sentences[i];
+                if (currentTimeMs >= sentence.startTimeMs && currentTimeMs < sentence.endTimeMs) {
+                    // This is the current sentence
+                    const sentenceElement = document.querySelector(`.sentence[data-sentence-index="${i}"]`);
+
+                    if (sentenceElement) {
+                        // Add highlight
+                        sentenceElement.classList.add('current-sentence');
+
+                        // Ensure the sentence is visible in the viewport
+                        ensureSentenceVisible(sentenceElement);
+                    }
+
+                    break;
+                }
+            }
+        }
+
+        // Make sure the highlighted sentence is visible
+        function ensureSentenceVisible(sentenceElement) {
+            const container = document.getElementById('lesson-text');
+            if (!container || !sentenceElement) return;
+
+            // Check if element is in the container's visible area
+            const containerRect = container.getBoundingClientRect();
+            const elementRect = sentenceElement.getBoundingClientRect();
+
+            // If element is not fully visible
+            if (elementRect.top < containerRect.top || elementRect.bottom > containerRect.bottom) {
+                // Find which page contains this sentence
+                const sentenceIndex = parseInt(sentenceElement.getAttribute('data-sentence-index'));
+                let pageWithSentence = 0;
+                let sentenceCount = 0;
+
+                // Find which page contains this sentence
+                for (let i = 0; i < pages.length; i++) {
+                    if (sentenceCount + pages[i].length > sentenceIndex) {
+                        pageWithSentence = i;
+                        break;
+                    }
+                    sentenceCount += pages[i].length;
+                }
+
+                // Switch to that page if needed
+                if (currentPage !== pageWithSentence) {
+                    currentPage = pageWithSentence;
+                    renderPage(currentPage);
+                }
+
+                // Smooth scroll to the sentence
+                sentenceElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+            }
         }
 
         document.addEventListener('DOMContentLoaded', function() {
@@ -218,6 +445,7 @@
                         renderPage(currentPage);
                     }
                 });
+
                 document.getElementById('nextPageBtn').addEventListener('click', function() {
                     if (currentPage < pages.length - 1) {
                         currentPage++;
@@ -231,7 +459,17 @@
                     currentPage = Math.min(prevPage, pages.length - 1);
                     renderPage(currentPage);
                 });
+
+                // Add audio timeupdate event to highlight current sentence
+                const audioElement = document.querySelector('.lesson-audio');
+                if (audioElement) {
+                    audioElement.addEventListener('timeupdate', function() {
+                        const currentTimeMs = audioElement.currentTime * 1000;
+                        highlightCurrentSentence(currentTimeMs);
+                    });
+                }
             }, 100);
         });
     </script>
 }
+

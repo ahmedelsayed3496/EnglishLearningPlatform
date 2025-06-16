@@ -19,6 +19,7 @@ namespace EnglishLearningPlatform.Models
         public string ImagePath { get; set; }
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public string? WordTimingsJson { get; set; }
 
         // Foreign key to ApplicationUser
         [Required]

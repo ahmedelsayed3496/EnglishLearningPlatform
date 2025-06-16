@@ -1,0 +1,1028 @@
+[
+  {
+    "Index": 0,
+    "Word": "Hi,",
+    "OffsetMs": 52,
+    "DurationMs": 355.25
+  },
+  {
+    "Index": 1,
+    "Word": "this",
+    "OffsetMs": 513,
+    "DurationMs": 118.375
+  },
+  {
+    "Index": 2,
+    "Word": "is",
+    "OffsetMs": 631,
+    "DurationMs": 197.375
+  },
+  {
+    "Index": 3,
+    "Word": "AJ",
+    "OffsetMs": 842,
+    "DurationMs": 171.062
+  },
+  {
+    "Index": 4,
+    "Word": "with",
+    "OffsetMs": 1026,
+    "DurationMs": 342.125
+  },
+  {
+    "Index": 5,
+    "Word": "your",
+    "OffsetMs": 1381,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 6,
+    "Word": "next",
+    "OffsetMs": 1513,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 7,
+    "Word": "lesson.",
+    "OffsetMs": 1644,
+    "DurationMs": 328.937
+  },
+  {
+    "Index": 8,
+    "Word": "The",
+    "OffsetMs": 1986,
+    "DurationMs": 513.187
+  },
+  {
+    "Index": 9,
+    "Word": "rest",
+    "OffsetMs": 2513,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 10,
+    "Word": "of",
+    "OffsetMs": 3407,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 11,
+    "Word": "the",
+    "OffsetMs": 3526,
+    "DurationMs": 328.937
+  },
+  {
+    "Index": 12,
+    "Word": "lessons",
+    "OffsetMs": 3868,
+    "DurationMs": 52.625
+  },
+  {
+    "Index": 13,
+    "Word": "are",
+    "OffsetMs": 3934,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 14,
+    "Word": "going",
+    "OffsetMs": 4039,
+    "DurationMs": 500
+  },
+  {
+    "Index": 15,
+    "Word": "to",
+    "OffsetMs": 4592,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 16,
+    "Word": "be",
+    "OffsetMs": 4723,
+    "DurationMs": 236.812
+  },
+  {
+    "Index": 17,
+    "Word": "a",
+    "OffsetMs": 4973,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 18,
+    "Word": "little",
+    "OffsetMs": 5092,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 19,
+    "Word": "bit",
+    "OffsetMs": 5236,
+    "DurationMs": 65.812
+  },
+  {
+    "Index": 20,
+    "Word": "different",
+    "OffsetMs": 5315,
+    "DurationMs": 250
+  },
+  {
+    "Index": 21,
+    "Word": "than",
+    "OffsetMs": 5578,
+    "DurationMs": 328.937
+  },
+  {
+    "Index": 22,
+    "Word": "what",
+    "OffsetMs": 6828,
+    "DurationMs": 394.75
+  },
+  {
+    "Index": 23,
+    "Word": "you\u2019ve",
+    "OffsetMs": 7236,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 24,
+    "Word": "had",
+    "OffsetMs": 7381,
+    "DurationMs": 157.875
+  },
+  {
+    "Index": 25,
+    "Word": "up",
+    "OffsetMs": 7552,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 26,
+    "Word": "\u2018til",
+    "OffsetMs": 7697,
+    "DurationMs": 223.687
+  },
+  {
+    "Index": 27,
+    "Word": "now.",
+    "OffsetMs": 7934,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 28,
+    "Word": "In",
+    "OffsetMs": 8078,
+    "DurationMs": 65.812
+  },
+  {
+    "Index": 29,
+    "Word": "the",
+    "OffsetMs": 8144,
+    "DurationMs": 223.687
+  },
+  {
+    "Index": 30,
+    "Word": "rest",
+    "OffsetMs": 8381,
+    "DurationMs": 381.562
+  },
+  {
+    "Index": 31,
+    "Word": "of",
+    "OffsetMs": 8776,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 32,
+    "Word": "these",
+    "OffsetMs": 9671,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 33,
+    "Word": "lessons,",
+    "OffsetMs": 9815,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 34,
+    "Word": "I\u2019m",
+    "OffsetMs": 9921,
+    "DurationMs": 328.937
+  },
+  {
+    "Index": 35,
+    "Word": "going",
+    "OffsetMs": 10263,
+    "DurationMs": 65.812
+  },
+  {
+    "Index": 36,
+    "Word": "to",
+    "OffsetMs": 10342,
+    "DurationMs": 197.375
+  },
+  {
+    "Index": 37,
+    "Word": "talk",
+    "OffsetMs": 10552,
+    "DurationMs": 644.75
+  },
+  {
+    "Index": 38,
+    "Word": "about",
+    "OffsetMs": 11289,
+    "DurationMs": 65.75
+  },
+  {
+    "Index": 39,
+    "Word": "some",
+    "OffsetMs": 11355,
+    "DurationMs": 144.75
+  },
+  {
+    "Index": 40,
+    "Word": "book",
+    "OffsetMs": 11513,
+    "DurationMs": 223.687
+  },
+  {
+    "Index": 41,
+    "Word": "or",
+    "OffsetMs": 11750,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 42,
+    "Word": "article",
+    "OffsetMs": 11855,
+    "DurationMs": 526.312
+  },
+  {
+    "Index": 43,
+    "Word": "or",
+    "OffsetMs": 13302,
+    "DurationMs": 342.125
+  },
+  {
+    "Index": 44,
+    "Word": "idea,",
+    "OffsetMs": 13657,
+    "DurationMs": 197.375
+  },
+  {
+    "Index": 45,
+    "Word": "I\u2019ll",
+    "OffsetMs": 13868,
+    "DurationMs": 276.312
+  },
+  {
+    "Index": 46,
+    "Word": "probably",
+    "OffsetMs": 14210,
+    "DurationMs": 184.187
+  },
+  {
+    "Index": 47,
+    "Word": "read",
+    "OffsetMs": 14407,
+    "DurationMs": 460.5
+  },
+  {
+    "Index": 48,
+    "Word": "a",
+    "OffsetMs": 14881,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 49,
+    "Word": "little",
+    "OffsetMs": 15026,
+    "DurationMs": 447.375
+  },
+  {
+    "Index": 50,
+    "Word": "bit",
+    "OffsetMs": 15578,
+    "DurationMs": 144.75
+  },
+  {
+    "Index": 51,
+    "Word": "of",
+    "OffsetMs": 15723,
+    "DurationMs": 144.75
+  },
+  {
+    "Index": 52,
+    "Word": "it",
+    "OffsetMs": 15881,
+    "DurationMs": 473.687
+  },
+  {
+    "Index": 53,
+    "Word": "just",
+    "OffsetMs": 16368,
+    "DurationMs": 157.875
+  },
+  {
+    "Index": 54,
+    "Word": "so",
+    "OffsetMs": 16539,
+    "DurationMs": 52.625
+  },
+  {
+    "Index": 55,
+    "Word": "you",
+    "OffsetMs": 16605,
+    "DurationMs": 223.687
+  },
+  {
+    "Index": 56,
+    "Word": "can",
+    "OffsetMs": 16842,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 57,
+    "Word": "get",
+    "OffsetMs": 16973,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 58,
+    "Word": "the",
+    "OffsetMs": 17092,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 59,
+    "Word": "general",
+    "OffsetMs": 17210,
+    "DurationMs": 223.687
+  },
+  {
+    "Index": 60,
+    "Word": "idea",
+    "OffsetMs": 17447,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 61,
+    "Word": "of",
+    "OffsetMs": 17552,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 62,
+    "Word": "the",
+    "OffsetMs": 17697,
+    "DurationMs": 144.75
+  },
+  {
+    "Index": 63,
+    "Word": "topic,",
+    "OffsetMs": 17855,
+    "DurationMs": 289.5
+  },
+  {
+    "Index": 64,
+    "Word": "and",
+    "OffsetMs": 19065,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 65,
+    "Word": "then",
+    "OffsetMs": 19197,
+    "DurationMs": 381.562
+  },
+  {
+    "Index": 66,
+    "Word": "I\u2019ll",
+    "OffsetMs": 19592,
+    "DurationMs": 368.437
+  },
+  {
+    "Index": 67,
+    "Word": "talk",
+    "OffsetMs": 19973,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 68,
+    "Word": "about",
+    "OffsetMs": 20065,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 69,
+    "Word": "that",
+    "OffsetMs": 20184,
+    "DurationMs": 513.187
+  },
+  {
+    "Index": 70,
+    "Word": "topic.",
+    "OffsetMs": 20802,
+    "DurationMs": 52.625
+  },
+  {
+    "Index": 71,
+    "Word": "And,",
+    "OffsetMs": 20855,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 72,
+    "Word": "of",
+    "OffsetMs": 20947,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 73,
+    "Word": "course,",
+    "OffsetMs": 21078,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 74,
+    "Word": "we\u2019ll",
+    "OffsetMs": 21171,
+    "DurationMs": 236.812
+  },
+  {
+    "Index": 75,
+    "Word": "have",
+    "OffsetMs": 21421,
+    "DurationMs": 236.812
+  },
+  {
+    "Index": 76,
+    "Word": "our",
+    "OffsetMs": 21671,
+    "DurationMs": 184.187
+  },
+  {
+    "Index": 77,
+    "Word": "same",
+    "OffsetMs": 21868,
+    "DurationMs": 578.937
+  },
+  {
+    "Index": 78,
+    "Word": "mini\u2011stories,",
+    "OffsetMs": 22460,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 79,
+    "Word": "we\u2019re",
+    "OffsetMs": 23368,
+    "DurationMs": 328.937
+  },
+  {
+    "Index": 80,
+    "Word": "going",
+    "OffsetMs": 23789,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 81,
+    "Word": "to",
+    "OffsetMs": 23868,
+    "DurationMs": 144.75
+  },
+  {
+    "Index": 82,
+    "Word": "have",
+    "OffsetMs": 24026,
+    "DurationMs": 460.5
+  },
+  {
+    "Index": 83,
+    "Word": "our",
+    "OffsetMs": 24592,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 84,
+    "Word": "vocabulary",
+    "OffsetMs": 24671,
+    "DurationMs": 381.562
+  },
+  {
+    "Index": 85,
+    "Word": "lessons,",
+    "OffsetMs": 25960,
+    "DurationMs": 210.5
+  },
+  {
+    "Index": 86,
+    "Word": "and",
+    "OffsetMs": 26184,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 87,
+    "Word": "we\u2019re",
+    "OffsetMs": 26328,
+    "DurationMs": 302.625
+  },
+  {
+    "Index": 88,
+    "Word": "going",
+    "OffsetMs": 26644,
+    "DurationMs": 776.312
+  },
+  {
+    "Index": 89,
+    "Word": "to",
+    "OffsetMs": 27526,
+    "DurationMs": 65.812
+  },
+  {
+    "Index": 90,
+    "Word": "add",
+    "OffsetMs": 27592,
+    "DurationMs": 144.75
+  },
+  {
+    "Index": 91,
+    "Word": "one",
+    "OffsetMs": 27750,
+    "DurationMs": 210.5
+  },
+  {
+    "Index": 92,
+    "Word": "more",
+    "OffsetMs": 27973,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 93,
+    "Word": "kind",
+    "OffsetMs": 28065,
+    "DurationMs": 197.375
+  },
+  {
+    "Index": 94,
+    "Word": "of",
+    "OffsetMs": 28276,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 95,
+    "Word": "lesson,",
+    "OffsetMs": 28381,
+    "DurationMs": 776.312
+  },
+  {
+    "Index": 96,
+    "Word": "the",
+    "OffsetMs": 29171,
+    "DurationMs": 565.812
+  },
+  {
+    "Index": 97,
+    "Word": "point",
+    "OffsetMs": 29828,
+    "DurationMs": 65.812
+  },
+  {
+    "Index": 98,
+    "Word": "of",
+    "OffsetMs": 29894,
+    "DurationMs": 197.375
+  },
+  {
+    "Index": 99,
+    "Word": "view",
+    "OffsetMs": 30105,
+    "DurationMs": 394.75
+  },
+  {
+    "Index": 100,
+    "Word": "lesson.",
+    "OffsetMs": 31407,
+    "DurationMs": 250
+  },
+  {
+    "Index": 101,
+    "Word": "The",
+    "OffsetMs": 31671,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 102,
+    "Word": "point",
+    "OffsetMs": 31789,
+    "DurationMs": 289.5
+  },
+  {
+    "Index": 103,
+    "Word": "of",
+    "OffsetMs": 32092,
+    "DurationMs": 197.375
+  },
+  {
+    "Index": 104,
+    "Word": "view",
+    "OffsetMs": 32302,
+    "DurationMs": 197.375
+  },
+  {
+    "Index": 105,
+    "Word": "lesson",
+    "OffsetMs": 32513,
+    "DurationMs": 236.812
+  },
+  {
+    "Index": 106,
+    "Word": "is",
+    "OffsetMs": 32763,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 107,
+    "Word": "really",
+    "OffsetMs": 32855,
+    "DurationMs": 407.875
+  },
+  {
+    "Index": 108,
+    "Word": "great",
+    "OffsetMs": 33368,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 109,
+    "Word": "for",
+    "OffsetMs": 33447,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 110,
+    "Word": "learning",
+    "OffsetMs": 33552,
+    "DurationMs": 250
+  },
+  {
+    "Index": 111,
+    "Word": "grammar",
+    "OffsetMs": 33815,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 112,
+    "Word": "in",
+    "OffsetMs": 33907,
+    "DurationMs": 210.5
+  },
+  {
+    "Index": 113,
+    "Word": "an",
+    "OffsetMs": 34131,
+    "DurationMs": 552.625
+  },
+  {
+    "Index": 114,
+    "Word": "intuitive",
+    "OffsetMs": 34697,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 115,
+    "Word": "way.",
+    "OffsetMs": 35592,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 116,
+    "Word": "Alright,",
+    "OffsetMs": 35736,
+    "DurationMs": 289.5
+  },
+  {
+    "Index": 117,
+    "Word": "so",
+    "OffsetMs": 36039,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 118,
+    "Word": "let\u2019s",
+    "OffsetMs": 36131,
+    "DurationMs": 223.687
+  },
+  {
+    "Index": 119,
+    "Word": "get",
+    "OffsetMs": 36368,
+    "DurationMs": 539.5
+  },
+  {
+    "Index": 120,
+    "Word": "started.",
+    "OffsetMs": 37815,
+    "DurationMs": 210.5
+  },
+  {
+    "Index": 121,
+    "Word": "This",
+    "OffsetMs": 38039,
+    "DurationMs": 289.5
+  },
+  {
+    "Index": 122,
+    "Word": "lesson",
+    "OffsetMs": 38342,
+    "DurationMs": 368.437
+  },
+  {
+    "Index": 123,
+    "Word": "is",
+    "OffsetMs": 38789,
+    "DurationMs": 157.875
+  },
+  {
+    "Index": 124,
+    "Word": "called",
+    "OffsetMs": 38960,
+    "DurationMs": 302.625
+  },
+  {
+    "Index": 125,
+    "Word": "\u201CThe",
+    "OffsetMs": 39276,
+    "DurationMs": 407.875
+  },
+  {
+    "Index": 126,
+    "Word": "Kaizen",
+    "OffsetMs": 39750,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 127,
+    "Word": "Way.\u201D",
+    "OffsetMs": 39894,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 128,
+    "Word": "So",
+    "OffsetMs": 39986,
+    "DurationMs": 578.937
+  },
+  {
+    "Index": 129,
+    "Word": "we\u2019re",
+    "OffsetMs": 40578,
+    "DurationMs": 355.25
+  },
+  {
+    "Index": 130,
+    "Word": "going",
+    "OffsetMs": 40947,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 131,
+    "Word": "to",
+    "OffsetMs": 41855,
+    "DurationMs": 513.187
+  },
+  {
+    "Index": 132,
+    "Word": "talk",
+    "OffsetMs": 42473,
+    "DurationMs": 65.812
+  },
+  {
+    "Index": 133,
+    "Word": "about",
+    "OffsetMs": 42539,
+    "DurationMs": 157.875
+  },
+  {
+    "Index": 134,
+    "Word": "a",
+    "OffsetMs": 42710,
+    "DurationMs": 250
+  },
+  {
+    "Index": 135,
+    "Word": "book.",
+    "OffsetMs": 42973,
+    "DurationMs": 157.875
+  },
+  {
+    "Index": 136,
+    "Word": "The",
+    "OffsetMs": 43144,
+    "DurationMs": 552.625
+  },
+  {
+    "Index": 137,
+    "Word": "book",
+    "OffsetMs": 43710,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 138,
+    "Word": "is",
+    "OffsetMs": 44605,
+    "DurationMs": 250
+  },
+  {
+    "Index": 139,
+    "Word": "called",
+    "OffsetMs": 44868,
+    "DurationMs": 407.875
+  },
+  {
+    "Index": 140,
+    "Word": "The",
+    "OffsetMs": 45342,
+    "DurationMs": 171.062
+  },
+  {
+    "Index": 141,
+    "Word": "Kaizen",
+    "OffsetMs": 45526,
+    "DurationMs": 328.937
+  },
+  {
+    "Index": 142,
+    "Word": "Way",
+    "OffsetMs": 45907,
+    "DurationMs": 65.812
+  },
+  {
+    "Index": 143,
+    "Word": "by",
+    "OffsetMs": 45973,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 144,
+    "Word": "Robert",
+    "OffsetMs": 46078,
+    "DurationMs": 486.812
+  },
+  {
+    "Index": 145,
+    "Word": "Maurer.",
+    "OffsetMs": 46578,
+    "DurationMs": 342.125
+  },
+  {
+    "Index": 146,
+    "Word": "Now,",
+    "OffsetMs": 46934,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 147,
+    "Word": "kaizen",
+    "OffsetMs": 47842,
+    "DurationMs": 263.187
+  },
+  {
+    "Index": 148,
+    "Word": "is",
+    "OffsetMs": 48118,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 149,
+    "Word": "a",
+    "OffsetMs": 48263,
+    "DurationMs": 223.687
+  },
+  {
+    "Index": 150,
+    "Word": "Japanese",
+    "OffsetMs": 48500,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 151,
+    "Word": "word",
+    "OffsetMs": 48605,
+    "DurationMs": 276.312
+  },
+  {
+    "Index": 152,
+    "Word": "although",
+    "OffsetMs": 48894,
+    "DurationMs": 250
+  },
+  {
+    "Index": 153,
+    "Word": "we",
+    "OffsetMs": 49157,
+    "DurationMs": 65.812
+  },
+  {
+    "Index": 154,
+    "Word": "use",
+    "OffsetMs": 49236,
+    "DurationMs": 447.375
+  },
+  {
+    "Index": 155,
+    "Word": "it",
+    "OffsetMs": 49697,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 156,
+    "Word": "in",
+    "OffsetMs": 50605,
+    "DurationMs": 171.062
+  },
+  {
+    "Index": 157,
+    "Word": "English",
+    "OffsetMs": 50789,
+    "DurationMs": 460.5
+  },
+  {
+    "Index": 158,
+    "Word": "now",
+    "OffsetMs": 52171,
+    "DurationMs": 197.375
+  },
+  {
+    "Index": 159,
+    "Word": "a",
+    "OffsetMs": 52381,
+    "DurationMs": 250
+  },
+  {
+    "Index": 160,
+    "Word": "little",
+    "OffsetMs": 52644,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 161,
+    "Word": "bit.",
+    "OffsetMs": 52750,
+    "DurationMs": 447.375
+  },
+  {
+    "Index": 162,
+    "Word": "Especially",
+    "OffsetMs": 53210,
+    "DurationMs": 263.187
+  },
+  {
+    "Index": 163,
+    "Word": "in",
+    "OffsetMs": 53539,
+    "DurationMs": 157.875
+  },
+  {
+    "Index": 164,
+    "Word": "Business",
+    "OffsetMs": 53710,
+    "DurationMs": 407.875
+  },
+  {
+    "Index": 165,
+    "Word": "you",
+    "OffsetMs": 54131,
+    "DurationMs": 473.687
+  },
+  {
+    "Index": 166,
+    "Word": "find",
+    "OffsetMs": 54618,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 167,
+    "Word": "it",
+    "OffsetMs": 55513,
+    "DurationMs": 394.75
+  },
+  {
+    "Index": 168,
+    "Word": "a",
+    "OffsetMs": 56013,
+    "DurationMs": 92.062
+  },
+  {
+    "Index": 169,
+    "Word": "lot,",
+    "OffsetMs": 56105,
+    "DurationMs": 460.5
+  },
+  {
+    "Index": 170,
+    "Word": "kaizen.",
+    "OffsetMs": 56578,
+    "DurationMs": 131.562
+  }
+]
