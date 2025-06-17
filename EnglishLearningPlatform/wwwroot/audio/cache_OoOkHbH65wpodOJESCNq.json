@@ -1,0 +1,38 @@
+[
+  {
+    "Index": 0,
+    "Word": "A",
+    "OffsetMs": 52,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 1,
+    "Word": "specific",
+    "OffsetMs": 184,
+    "DurationMs": 552.625
+  },
+  {
+    "Index": 2,
+    "Word": "commercial",
+    "OffsetMs": 750,
+    "DurationMs": 552.625
+  },
+  {
+    "Index": 3,
+    "Word": "enterprise",
+    "OffsetMs": 1315,
+    "DurationMs": 644.75
+  },
+  {
+    "Index": 4,
+    "Word": "or",
+    "OffsetMs": 2026,
+    "DurationMs": 144.75
+  },
+  {
+    "Index": 5,
+    "Word": "establishment.",
+    "OffsetMs": 2184,
+    "DurationMs": 855.25
+  }
+]

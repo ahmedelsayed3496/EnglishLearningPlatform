@@ -1,0 +1,68 @@
+[
+  {
+    "Index": 0,
+    "Word": "A",
+    "OffsetMs": 52,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 1,
+    "Word": "Japanese",
+    "OffsetMs": 171,
+    "DurationMs": 605.25
+  },
+  {
+    "Index": 2,
+    "Word": "business",
+    "OffsetMs": 842,
+    "DurationMs": 394.75
+  },
+  {
+    "Index": 3,
+    "Word": "practice",
+    "OffsetMs": 1250,
+    "DurationMs": 460.5
+  },
+  {
+    "Index": 4,
+    "Word": "of",
+    "OffsetMs": 1723,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 5,
+    "Word": "continuous",
+    "OffsetMs": 1815,
+    "DurationMs": 644.75
+  },
+  {
+    "Index": 6,
+    "Word": "improvement",
+    "OffsetMs": 2473,
+    "DurationMs": 565.812
+  },
+  {
+    "Index": 7,
+    "Word": "in",
+    "OffsetMs": 3105,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 8,
+    "Word": "performance",
+    "OffsetMs": 3223,
+    "DurationMs": 605.25
+  },
+  {
+    "Index": 9,
+    "Word": "and",
+    "OffsetMs": 3881,
+    "DurationMs": 171.062
+  },
+  {
+    "Index": 10,
+    "Word": "productivity.",
+    "OffsetMs": 4065,
+    "DurationMs": 815.812
+  }
+]

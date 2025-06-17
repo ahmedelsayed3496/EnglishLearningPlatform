@@ -1,0 +1,38 @@
+[
+  {
+    "Index": 0,
+    "Word": "One",
+    "OffsetMs": 52,
+    "DurationMs": 263.187
+  },
+  {
+    "Index": 1,
+    "Word": "who",
+    "OffsetMs": 328,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 2,
+    "Word": "has",
+    "OffsetMs": 473,
+    "DurationMs": 315.812
+  },
+  {
+    "Index": 3,
+    "Word": "(especially",
+    "OffsetMs": 894,
+    "DurationMs": 92.062
+  },
+  {
+    "Index": 4,
+    "Word": "parapsychological)",
+    "OffsetMs": 986,
+    "DurationMs": 578.937
+  },
+  {
+    "Index": 5,
+    "Word": "intuition.",
+    "OffsetMs": 1578,
+    "DurationMs": 1171.0619
+  }
+]

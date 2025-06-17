@@ -1,0 +1,44 @@
+[
+  {
+    "Index": 0,
+    "Word": "I",
+    "OffsetMs": 52,
+    "DurationMs": 184.187
+  },
+  {
+    "Index": 1,
+    "Word": "go",
+    "OffsetMs": 250,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 2,
+    "Word": "to",
+    "OffsetMs": 394,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 3,
+    "Word": "the",
+    "OffsetMs": 513,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 4,
+    "Word": "school",
+    "OffsetMs": 644,
+    "DurationMs": 486.812
+  },
+  {
+    "Index": 5,
+    "Word": "every",
+    "OffsetMs": 1144,
+    "DurationMs": 276.312
+  },
+  {
+    "Index": 6,
+    "Word": "day.",
+    "OffsetMs": 1434,
+    "DurationMs": 368.437
+  }
+]

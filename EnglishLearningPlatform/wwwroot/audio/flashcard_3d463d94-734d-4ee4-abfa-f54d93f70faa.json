@@ -1,0 +1,56 @@
+[
+  {
+    "Index": 0,
+    "Word": "Subject;",
+    "OffsetMs": 52,
+    "DurationMs": 710.5
+  },
+  {
+    "Index": 1,
+    "Word": "theme;",
+    "OffsetMs": 868,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 2,
+    "Word": "a",
+    "OffsetMs": 973,
+    "DurationMs": 381.562
+  },
+  {
+    "Index": 3,
+    "Word": "category",
+    "OffsetMs": 1473,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 4,
+    "Word": "or",
+    "OffsetMs": 1592,
+    "DurationMs": 65.812
+  },
+  {
+    "Index": 5,
+    "Word": "general",
+    "OffsetMs": 1671,
+    "DurationMs": 644.75
+  },
+  {
+    "Index": 6,
+    "Word": "area",
+    "OffsetMs": 2368,
+    "DurationMs": 144.75
+  },
+  {
+    "Index": 7,
+    "Word": "of",
+    "OffsetMs": 2526,
+    "DurationMs": 447.375
+  },
+  {
+    "Index": 8,
+    "Word": "interest.",
+    "OffsetMs": 2986,
+    "DurationMs": 368.437
+  }
+]

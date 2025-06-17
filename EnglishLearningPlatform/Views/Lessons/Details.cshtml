@@ -8,6 +8,56 @@
 
 @section Styles {
     <link rel="stylesheet" href="~/css/lesson.details.css" asp-append-version="true" />
+    <style>
+        /* Audio button styling in word bubbles */
+        .audio-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #8e44ad;
+            padding: 2px 5px;
+            border-radius: 50%;
+            transition: all 0.2s ease;
+            vertical-align: middle;
+            font-size: 0.8rem;
+        }
+
+            .audio-btn:hover {
+                background-color: rgba(142, 68, 173, 0.1);
+                transform: scale(1.1);
+            }
+
+            .audio-btn:disabled {
+                opacity: 0.5;
+                cursor: wait;
+            }
+
+        /* Adjust bubble layout to accommodate buttons */
+        .word-bubble-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .word-bubble-body,
+        .word-bubble-example {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+            .word-bubble-body > div,
+            .word-bubble-example > div {
+                flex: 1;
+            }
+
+        /* Add hidden audio element for bubble playback */
+        #bubble-audio-player {
+            position: absolute;
+            left: -9999px;
+        }
+    </style>
 }
 
 
@@ -277,7 +327,7 @@
                 });
         }
 
-        function showWordBubble(word, definition, example, position, wordElement) {
+                       function showWordBubble(word, definition, example, position, wordElement) {
             // Create comic-style speech bubble
             const bubble = document.createElement('div');
             bubble.className = 'word-bubble';
@@ -294,10 +344,28 @@
             bubble.style.top = Math.max(10, bubbleTop) + 'px';
             bubble.style.left = Math.max(10, Math.min(bubbleLeft, lessonTextRect.width - 310)) + 'px';
 
+            // Create HTML with audio buttons
             bubble.innerHTML = `
-                <div class="word-bubble-header">${word}</div>
-                <div class="word-bubble-body">${definition}</div>
-                ${example ? `<div class="word-bubble-example">"${example}"</div>` : ''}
+                <div class="word-bubble-header d-flex justify-content-between align-items-center">
+                    <span>${word}</span>
+                    <button class="audio-btn play-audio" data-text="${word}">
+                        <i class="bi bi-volume-up"></i>
+                    </button>
+                </div>
+                <div class="word-bubble-body">
+                    <div>${definition}</div>
+                    <button class="audio-btn play-audio" data-text="${definition}">
+                        <i class="bi bi-volume-up"></i>
+                    </button>
+                </div>
+                ${example ? `
+                    <div class="word-bubble-example">
+                        <div>"${example}"</div>
+                        <button class="audio-btn play-audio" data-text="${example}">
+                            <i class="bi bi-volume-up"></i>
+                        </button>
+                    </div>
+                ` : ''}
                 <div class="word-bubble-actions">
                     <button class="word-bubble-button">Add to Flashcards</button>
                     <button class="word-bubble-button word-bubble-close">Close</button>
@@ -313,6 +381,128 @@
             lessonText.appendChild(bubble);
             activeBubble = bubble;
 
+            // Set up hidden audio player if not already present
+            let audioPlayer = document.getElementById('bubble-audio-player');
+            if (!audioPlayer) {
+                audioPlayer = document.createElement('audio');
+                audioPlayer.id = 'bubble-audio-player';
+                audioPlayer.className = 'd-none';
+                document.body.appendChild(audioPlayer);
+            }
+
+            // Initialize audio cache if not already present
+            if (!window.audioCache) {
+                window.audioCache = {};
+            }
+
+            // Handle audio button clicks with preloading and caching
+            bubble.querySelectorAll('.play-audio').forEach(button => {
+                const text = button.getAttribute('data-text');
+
+                // Start preloading audio right away
+                if (text && !window.audioCache[text]) {
+                    // Attempt to preload in the background
+                    fetch('/Flashcards/GenerateAudio', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]')?.value
+                        },
+                        body: JSON.stringify({ text: text })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.audioPath) {
+                            // Store in memory cache
+                            window.audioCache[text] = data.audioPath;
+                        }
+                    })
+                    .catch(() => {}); // Silently fail on preloading errors
+                }
+
+                // Set up the click event
+                button.addEventListener('click', function() {
+                    const text = this.getAttribute('data-text');
+                    if (!text) return;
+
+                    // If we already have the audio path from cache
+                    if (window.audioCache[text]) {
+                        // Play directly from cache without another server request
+                        audioPlayer.src = window.audioCache[text];
+
+                        // Show playing state
+                        const originalIcon = this.querySelector('i').className;
+                        this.querySelector('i').className = 'bi bi-volume-down-fill';
+                        this.disabled = true;
+
+                        // Play the audio
+                        audioPlayer.play()
+                            .catch(err => {
+                                console.error('Error playing audio:', err);
+                                this.querySelector('i').className = originalIcon;
+                                this.disabled = false;
+                            });
+
+                        // Reset icon and state when audio ends
+                        audioPlayer.onended = () => {
+                            this.querySelector('i').className = originalIcon;
+                            this.disabled = false;
+                        };
+                        return;
+                    }
+
+                    // Show loading state
+                    const originalIcon = this.querySelector('i').className;
+                    this.querySelector('i').className = 'bi bi-hourglass-split';
+                    this.disabled = true;
+
+                    // Generate audio file for this text
+                    fetch('/Flashcards/GenerateAudio', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]')?.value
+                        },
+                        body: JSON.stringify({
+                            text: text
+                        })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.audioPath) {
+                            // Store in memory cache
+                            window.audioCache[text] = data.audioPath;
+
+                            // Play the generated audio
+                            audioPlayer.src = data.audioPath;
+                            audioPlayer.play()
+                                .catch(err => {
+                                    console.error('Error playing audio:', err);
+                                    this.querySelector('i').className = originalIcon;
+                                    this.disabled = false;
+                                });
+
+                            // Reset button when audio ends
+                            audioPlayer.onended = () => {
+                                this.querySelector('i').className = originalIcon;
+                                this.disabled = false;
+                            };
+                        } else {
+                            // Reset on error
+                            this.querySelector('i').className = originalIcon;
+                            this.disabled = false;
+                            showToastMessage('Audio generation failed', 'error');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        this.querySelector('i').className = originalIcon;
+                        this.disabled = false;
+                        showToastMessage('Audio generation failed', 'error');
+                    });
+                });
+            });
+
             // Handle close button click
             bubble.querySelector('.word-bubble-close').addEventListener('click', function() {
                 bubble.remove();
@@ -326,6 +516,8 @@
                 activeBubble = null;
             });
         }
+
+
 
         function createFlashcard(word, meaning, exampleSentence) {
             fetch('/Flashcards/CreateAjax', {

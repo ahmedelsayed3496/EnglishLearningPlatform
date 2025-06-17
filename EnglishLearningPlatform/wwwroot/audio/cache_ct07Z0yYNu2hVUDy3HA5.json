@@ -1,0 +1,122 @@
+[
+  {
+    "Index": 0,
+    "Word": "A",
+    "OffsetMs": 52,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 1,
+    "Word": "collection",
+    "OffsetMs": 184,
+    "DurationMs": 500
+  },
+  {
+    "Index": 2,
+    "Word": "of",
+    "OffsetMs": 697,
+    "DurationMs": 65.812
+  },
+  {
+    "Index": 3,
+    "Word": "sheets",
+    "OffsetMs": 776,
+    "DurationMs": 315.812
+  },
+  {
+    "Index": 4,
+    "Word": "of",
+    "OffsetMs": 1105,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 5,
+    "Word": "paper",
+    "OffsetMs": 1223,
+    "DurationMs": 394.75
+  },
+  {
+    "Index": 6,
+    "Word": "bound",
+    "OffsetMs": 1671,
+    "DurationMs": 250
+  },
+  {
+    "Index": 7,
+    "Word": "together",
+    "OffsetMs": 1934,
+    "DurationMs": 434.187
+  },
+  {
+    "Index": 8,
+    "Word": "to",
+    "OffsetMs": 2434,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 9,
+    "Word": "hinge",
+    "OffsetMs": 2539,
+    "DurationMs": 289.5
+  },
+  {
+    "Index": 10,
+    "Word": "at",
+    "OffsetMs": 2842,
+    "DurationMs": 65.812
+  },
+  {
+    "Index": 11,
+    "Word": "one",
+    "OffsetMs": 2921,
+    "DurationMs": 197.375
+  },
+  {
+    "Index": 12,
+    "Word": "edge,",
+    "OffsetMs": 3131,
+    "DurationMs": 368.437
+  },
+  {
+    "Index": 13,
+    "Word": "containing",
+    "OffsetMs": 3605,
+    "DurationMs": 65.812
+  },
+  {
+    "Index": 14,
+    "Word": "printed",
+    "OffsetMs": 3671,
+    "DurationMs": 486.812
+  },
+  {
+    "Index": 15,
+    "Word": "or",
+    "OffsetMs": 4171,
+    "DurationMs": 421.062
+  },
+  {
+    "Index": 16,
+    "Word": "written",
+    "OffsetMs": 4631,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 17,
+    "Word": "material,",
+    "OffsetMs": 4776,
+    "DurationMs": 236.812
+  },
+  {
+    "Index": 18,
+    "Word": "pictures,",
+    "OffsetMs": 5026,
+    "DurationMs": 578.937
+  },
+  {
+    "Index": 19,
+    "Word": "etc.",
+    "OffsetMs": 5710,
+    "DurationMs": 105.25
+  }
+]

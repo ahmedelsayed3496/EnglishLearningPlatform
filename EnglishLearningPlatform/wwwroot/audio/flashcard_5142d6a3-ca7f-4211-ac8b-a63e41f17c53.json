@@ -1,0 +1,38 @@
+[
+  {
+    "Index": 0,
+    "Word": "(manner)",
+    "OffsetMs": 52,
+    "DurationMs": 473.687
+  },
+  {
+    "Index": 1,
+    "Word": "In",
+    "OffsetMs": 630,
+    "DurationMs": 92.062
+  },
+  {
+    "Index": 2,
+    "Word": "a",
+    "OffsetMs": 723,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 3,
+    "Word": "special",
+    "OffsetMs": 854,
+    "DurationMs": 65.812
+  },
+  {
+    "Index": 4,
+    "Word": "manner;",
+    "OffsetMs": 933,
+    "DurationMs": 486.812
+  },
+  {
+    "Index": 5,
+    "Word": "specially.",
+    "OffsetMs": 1433,
+    "DurationMs": 407.875
+  }
+]

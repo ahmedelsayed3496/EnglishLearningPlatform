@@ -1,0 +1,423 @@
+﻿@model List<EnglishLearningPlatform.Models.Flashcard>
+@{
+    ViewData["Title"] = "Study Session";
+    Layout = "_LessonIndexLayout";
+    var mode = ViewBag.Mode ?? "all";
+    var cardCount = ViewBag.CardCount ?? 0;
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/flashcards.css" asp-append-version="true" />
+}
+
+<div class="container py-4">
+    <div class="flashcard-container-white">
+        <!-- View mode toggle buttons -->
+        <div class="view-toggle-container d-flex justify-content-center mb-4">
+            <div class="btn-group">
+                <a href="@Url.Action("Index", "Flashcards")"
+                   class="btn view-mode-btn">
+                    <i class="bi bi-grid me-2"></i> All Flashcards
+                </a>
+                <a href="@Url.Action("Study", "Flashcards")"
+                   class="btn view-mode-btn active">
+                    <i class="bi bi-mortarboard me-2"></i> Study
+                </a>
+            </div>
+        </div>
+
+        @if (Model == null || Model.Count == 0)
+        {
+            <div class="alert alert-info">
+                <i class="bi bi-info-circle me-2"></i> No flashcards are available to study at this time.
+                <div class="mt-3">
+                    <a href="@Url.Action("Study", "Flashcards")" class="btn btn-outline-primary">
+                        Return to Study Dashboard
+                    </a>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="h4">
+                    @switch (mode)
+                    {
+                        case "new":
+                            <span>New Cards Session</span>
+                            break;
+                        case "due":
+                            <span>Review Session</span>
+                            break;
+                        default:
+                            <span>Mixed Study Session</span>
+                            break;
+                    }
+                </h2>
+                <div>
+                    <span id="progressText" class="me-3">Card 1 of @Model.Count</span>
+                    <a href="@Url.Action("Study", "Flashcards")" class="btn btn-outline-secondary btn-sm">
+                        <i class="bi bi-x-lg"></i> End Session
+                    </a>
+                </div>
+            </div>
+
+            <div class="study-progress">
+                <div class="progress">
+                    <div id="progressBar" class="progress-bar" role="progressbar" style="width: 0%"
+                         aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+
+            <div id="sessionContent" class="study-container">
+                <div id="flashcardContainer" class="flashcard-container">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-front">
+                            <div class="card-word">
+                                <span id="currentWord"></span>
+                            </div>
+                            <div class="flashcard-audio">
+                                <button id="playWordAudio" class="play-audio-large">
+                                    <i class="bi bi-volume-up"></i>
+                                </button>
+                            </div>
+                            <div class="flip-hint">
+                                <i class="bi bi-arrow-repeat"></i> Click to reveal definition
+                            </div>
+                        </div>
+                        <div class="flashcard-back">
+                            <div class="card-meaning">
+                                <span id="currentMeaning"></span>
+                                <button id="playMeaningAudio" class="play-audio ms-2">
+                                    <i class="bi bi-volume-up"></i>
+                                </button>
+                            </div>
+                            <div class="card-example" id="exampleContainer">
+                                "<span id="currentExample"></span>"
+                                <button id="playExampleAudio" class="play-audio ms-2">
+                                    <i class="bi bi-volume-up"></i>
+                                </button>
+                            </div>
+                            <div class="answer-buttons">
+                                <button class="btn btn-lg btn-wrong answer-btn" data-correct="false">
+                                    <i class="bi bi-x-circle"></i> I didn't know
+                                </button>
+                                <button class="btn btn-lg btn-correct answer-btn" data-correct="true">
+                                    <i class="bi bi-check-circle"></i> I knew it
+                                </button>
+                            </div>
+                            <div class="card-level mt-3">
+                                <small class="text-muted">Card Level: <span id="cardLevel"></span></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sessionComplete" class="session-complete mt-4" style="display: none;">
+                <div class="session-complete-icon">
+                    <i class="bi bi-trophy"></i>
+                </div>
+                <h2>Session Complete!</h2>
+                <p class="lead">You've reviewed all the flashcards for this session.</p>
+                <div id="sessionStats" class="mt-4 mb-4 row">
+                    <div class="col-md-4 text-center">
+                        <div class="stat">
+                            <h3 id="totalCards">0</h3>
+                            <p>Cards Studied</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="stat">
+                            <h3 id="correctCards">0</h3>
+                            <p>Correct Answers</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="stat">
+                            <h3 id="accuracyRate">0%</h3>
+                            <p>Accuracy</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <a href="@Url.Action("Study", "Flashcards")" class="btn btn-primary">
+                        Return to Study Dashboard
+                    </a>
+                    <a href="@Url.Action("StudySession", "Flashcards", new { mode })" class="btn btn-outline-primary ms-2">
+                        Study Again
+                    </a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<!-- Hidden audio element for playback -->
+<audio id="audio-player" class="d-none"></audio>
+
+<!-- Add antiforgery token as hidden field -->
+@Html.AntiForgeryToken()
+
+@section Scripts {
+    @if (Model != null && Model.Count > 0)
+    {
+        <script>
+            try {
+                // Debug output
+                console.log('First flashcard in model:', @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.FirstOrDefault())));
+
+                // Prepare flashcard data from model with camelCase properties
+                const flashcards = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model, new System.Text.Json.JsonSerializerOptions
+                      {
+                          PropertyNamingPolicy = System.Text.Json.JsonNamingPolicy.CamelCase
+                      }));
+
+                console.log('First flashcard after serialization:', flashcards[0]);
+
+                let currentCardIndex = 0;
+                let correctCount = 0;
+                let totalCount = flashcards.length;
+                let answeredCards = [];
+
+                // Initialize the session
+                document.addEventListener("DOMContentLoaded", function() {
+                    showCurrentCard();
+
+                    // Set up event listeners
+                    document.getElementById('flashcardContainer').addEventListener('click', function() {
+                        this.classList.toggle('flipped');
+                    });
+
+                    document.querySelectorAll('.answer-btn').forEach(btn => {
+                        btn.addEventListener('click', function(e) {
+                            e.stopPropagation(); // Prevent flip toggle
+                            const isCorrect = this.getAttribute('data-correct') === 'true';
+                            submitAnswer(isCorrect);
+                        });
+                    });
+
+                    setupAudioButtons();
+                });
+
+                // Show the current flashcard
+                function showCurrentCard() {
+                    if (currentCardIndex >= flashcards.length) {
+                        showSessionComplete();
+                        return;
+                    }
+
+                    const card = flashcards[currentCardIndex];
+                    if (!card) return; // Safety check
+
+                    console.log('Current card data:', card);
+
+                    // Update card content - handle both camelCase and PascalCase
+                    document.getElementById('currentWord').textContent = card.word || card.Word || '';
+                    document.getElementById('currentMeaning').textContent = card.meaning || card.Meaning || '';
+                    document.getElementById('cardLevel').textContent = getRepetitionLevelText(card.repetitionLevel || card.RepetitionLevel || 0);
+
+                    // Update example if available
+                    const exampleContainer = document.getElementById('exampleContainer');
+                    const exampleText = card.exampleSentence || card.ExampleSentence;
+                    if (exampleText) {
+                        document.getElementById('currentExample').textContent = exampleText;
+                        exampleContainer.style.display = 'block';
+                    } else {
+                        exampleContainer.style.display = 'none';
+                    }
+
+                    // Update audio buttons
+                    setupAudioButtonForElement('playWordAudio', card.wordAudioPath || card.WordAudioPath);
+                    setupAudioButtonForElement('playMeaningAudio', card.meaningAudioPath || card.MeaningAudioPath);
+                    setupAudioButtonForElement('playExampleAudio', card.exampleAudioPath || card.ExampleAudioPath);
+
+                    // Reset card flip
+                    document.getElementById('flashcardContainer').classList.remove('flipped');
+
+                    // Update progress
+                    const progress = ((currentCardIndex) / totalCount) * 100;
+                    document.getElementById('progressBar').style.width = progress + '%';
+                    document.getElementById('progressBar').setAttribute('aria-valuenow', progress);
+                    document.getElementById('progressText').textContent = `Card ${currentCardIndex + 1} of ${totalCount}`;
+                }
+
+                function getRepetitionLevelText(level) {
+                    switch (level) {
+                        case 0: return "New";
+                        case 1: return "Learning (1 day)";
+                        case 2: return "Learning (3 days)";
+                        case 3: return "Review (1 week)";
+                        case 4: return "Review (2 weeks)";
+                        case 5: return "Mastered (1 month)";
+                        default: return `Level ${level}`;
+                    }
+                }
+
+                // Setup audio buttons
+                function setupAudioButtons() {
+                    const audioPlayer = document.getElementById('audio-player');
+                    if (!audioPlayer) return;
+
+                    document.querySelectorAll('.play-audio, .play-audio-large').forEach(button => {
+                        button.addEventListener('click', function(e) {
+                            e.stopPropagation(); // Prevent card flip
+
+                            const audioSrc = this.getAttribute('data-audio-src');
+                            if (!audioSrc) return;
+
+                            // Reset all buttons first
+                            document.querySelectorAll('.play-audio i, .play-audio-large i').forEach(icon => {
+                                if (icon && icon.parentElement) {
+                                    icon.className = icon.parentElement.classList.contains('play-audio-large')
+                                        ? 'bi bi-volume-up' : 'bi bi-volume-up';
+                                }
+                            });
+
+                            // Show playing state
+                            const icon = this.querySelector('i');
+                            if (icon) icon.className = 'bi bi-volume-down-fill';
+
+                            // Play audio
+                            audioPlayer.src = audioSrc;
+                            audioPlayer.play()
+                                .catch(err => {
+                                    console.error('Audio playback failed:', err);
+                                    if (icon) {
+                                        icon.className = this.classList.contains('play-audio-large')
+                                            ? 'bi bi-volume-up' : 'bi bi-volume-up';
+                                    }
+                                });
+
+                            // Reset icon when audio ends
+                            audioPlayer.onended = function() {
+                                if (icon) {
+                                    icon.className = button.classList.contains('play-audio-large')
+                                        ? 'bi bi-volume-up' : 'bi bi-volume-up';
+                                }
+                            };
+                        });
+                    });
+                }
+
+                // Setup specific audio button
+                function setupAudioButtonForElement(elementId, audioPath) {
+                    const button = document.getElementById(elementId);
+                    if (!button) return;
+
+                    if (audioPath) {
+                        button.setAttribute('data-audio-src', audioPath);
+                        button.style.display = 'inline-flex';
+                    } else {
+                        button.style.display = 'none';
+                    }
+                }
+
+                // Submit answer and move to next card
+                function submitAnswer(isCorrect) {
+                    if (!flashcards || currentCardIndex >= flashcards.length) return;
+
+                    const flashcard = flashcards[currentCardIndex];
+                    const flashcardId = flashcard.flashcardId || flashcard.FlashcardId;
+
+                    if (!flashcardId) {
+                        console.error('No flashcard ID found:', flashcard);
+                        moveToNextCard();
+                        return;
+                    }
+
+                    // Track this answer
+                    answeredCards.push({
+                        id: flashcardId,
+                        correct: isCorrect
+                    });
+
+                    if (isCorrect) {
+                        correctCount++;
+                    }
+
+                    // Get the token element safely
+                    const tokenElement = document.querySelector('input[name="__RequestVerificationToken"]');
+                    if (!tokenElement) {
+                        console.error('Anti-forgery token not found');
+                        moveToNextCard();
+                        return;
+                    }
+
+                    // Submit to API
+                    fetch('@Url.Action("SubmitAnswer", "Flashcards")', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'RequestVerificationToken': tokenElement.value
+                        },
+                        body: JSON.stringify({
+                            flashcardId: flashcardId,
+                            isCorrect: isCorrect
+                        })
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        moveToNextCard();
+                    })
+                    .catch(error => {
+                        console.error('Error submitting answer:', error);
+                        moveToNextCard(); // Still proceed even if there's an error
+                    });
+                }
+
+                function moveToNextCard() {
+                    // Move to next card after a short delay
+                    setTimeout(() => {
+                        currentCardIndex++;
+                        showCurrentCard();
+                    }, 500);
+                }
+
+                // Show session complete screen
+                function showSessionComplete() {
+                    const sessionContent = document.getElementById('sessionContent');
+                    const sessionComplete = document.getElementById('sessionComplete');
+
+                    if (sessionContent) sessionContent.style.display = 'none';
+                    if (sessionComplete) sessionComplete.style.display = 'block';
+
+                    // Update stats
+                    document.getElementById('totalCards').textContent = answeredCards.length;
+                    document.getElementById('correctCards').textContent = correctCount;
+
+                    const accuracy = answeredCards.length > 0
+                        ? Math.round((correctCount / answeredCards.length) * 100)
+                        : 0;
+                    document.getElementById('accuracyRate').textContent = `${accuracy}%`;
+
+                    // Update progress bar
+                    document.getElementById('progressBar').style.width = '100%';
+                    document.getElementById('progressText').textContent = `Complete! ${correctCount}/${totalCount} correct`;
+                }
+            } catch (error) {
+                console.error('Failed to initialize study session:', error);
+
+                // Provide graceful fallback
+                const container = document.querySelector('.container');
+                if (container) {
+                    container.innerHTML = `
+                        <div class="alert alert-danger">
+                            <strong>Error:</strong> There was a problem loading the study session.
+                            <div class="mt-3">
+                                <a href="${'@Url.Action("Study", "Flashcards")'}" class="btn btn-primary">
+                                    Return to Study Dashboard
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                }
+            }
+        </script>
+    }
+}

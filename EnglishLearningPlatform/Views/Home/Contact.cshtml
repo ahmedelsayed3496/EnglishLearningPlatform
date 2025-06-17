@@ -1,71 +1,112 @@
 ﻿@{
     ViewData["Title"] = "Contact Us";
+    Layout = "_LessonIndexLayout";
 }
 
-<div class="container py-5">
-    <div class="row">
-        <div class="col-lg-8 mx-auto">
-            <h1 class="mb-4">Contact Us</h1>
-            <p class="lead mb-4">Have questions about Lesson Tailor? We're here to help!</p>
+@section Styles {
+    <link rel="stylesheet" href="~/css/contact.css" asp-append-version="true" />
+}
 
-            <div class="card shadow-sm border-0 p-4 mb-4">
-                <form asp-action="SendMessage" asp-controller="Home" method="post">
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Your Name</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email Address</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="subject" class="form-label">Subject</label>
-                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter subject" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-
+<div class="contact-page-bg">
+    <div class="container">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h1>Contact Us</h1>
+                <p class="lead">Have questions about Lesson Tailor? We're here to help!</p>
             </div>
 
-            <div class="row mt-5">
-                <div class="col-md-4 mb-3">
-                    <div class="d-flex align-items-center">
-                        <div class="me-3">
-                            <i class="bi bi-geo-alt text-primary" style="font-size: 2rem;"></i>
+            <div class="row">
+                <div class="col-lg-7 mb-4 mb-lg-0">
+                    <div class="contact-form-card">
+                        <form asp-action="SendMessage" asp-controller="Home" method="post">
+                            <div class="mb-4">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="subject" name="subject" placeholder="What is this regarding?" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" placeholder="How can we help you?" required></textarea>
+                            </div>
+                            <div class="text-center text-md-start">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="bi bi-send me-2"></i> Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="row h-100">
+                        <div class="col-md-12 mb-4">
+                            <div class="contact-info-card d-flex flex-column">
+                                <div class="d-flex align-items-center">
+                                    <div class="contact-info-icon">
+                                        <i class="bi bi-geo-alt"></i>
+                                    </div>
+                                    <div class="contact-info-content">
+                                        <h5>Our Address</h5>
+                                        <p class="mb-0">123 Learning Street<br>Education City, ED 12345</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <h5>Our Address</h5>
-                            <p class="mb-0">123 Learning Street<br>Education City, ED 12345</p>
+                        <div class="col-md-12 mb-4">
+                            <div class="contact-info-card d-flex flex-column">
+                                <div class="d-flex align-items-center">
+                                    <div class="contact-info-icon">
+                                        <i class="bi bi-envelope"></i>
+                                    </div>
+                                    <div class="contact-info-content">
+                                        <h5>Email Us</h5>
+                                        <p class="mb-0">info@lessontailor.com<br>support@lessontailor.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="contact-info-card d-flex flex-column">
+                                <div class="d-flex align-items-center">
+                                    <div class="contact-info-icon">
+                                        <i class="bi bi-telephone"></i>
+                                    </div>
+                                    <div class="contact-info-content">
+                                        <h5>Call Us</h5>
+                                        <p class="mb-0">(555) 123-4567<br>(555) 987-6543</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-3">
-                    <div class="d-flex align-items-center">
-                        <div class="me-3">
-                            <i class="bi bi-envelope text-primary" style="font-size: 2rem;"></i>
-                        </div>
-                        <div>
-                            <h5>Email Us</h5>
-                            <p class="mb-0">info@lessontailor.com<br>support@lessontailor.com</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <div class="d-flex align-items-center">
-                        <div class="me-3">
-                            <i class="bi bi-telephone text-primary" style="font-size: 2rem;"></i>
-                        </div>
-                        <div>
-                            <h5>Call Us</h5>
-                            <p class="mb-0">(555) 123-4567<br>(555) 987-6543</p>
-                        </div>
-                    </div>
-                </div>
+            </div>
+
+            <div class="map-container mt-5">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400567!3d40.71277937933185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a23e28c1191%3A0x49f75d3281df052a!2sBroadway%2C%20New%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1616056021026!5m2!1sen!2s"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </div>
 </div>
+
+@section Scripts {
+    <script>
+        // Optional form validation and submission handling with AJAX
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+
+            form.addEventListener('submit', function(e) {
+                // You can add custom validation or AJAX submission here
+                // For now, we'll just let the form submit normally
+            });
+        });
+    </script>
+}

@@ -87,6 +87,13 @@ namespace EnglishLearningPlatform.Services
             }
         }
 
+        public async Task<string> GenerateFlashcardAudioAsync(string text)
+        {
+            // Create a unique file name based on the content
+            string fileName = "flashcard_" + Guid.NewGuid().ToString();
+            return await GenerateAudioFromTextAsync(text, fileName);
+        }
+
         private string GenerateSsmlWithWordBoundary(string text)
         {
             // Escape the text for XML
@@ -115,4 +122,7 @@ namespace EnglishLearningPlatform.Services
         public long OffsetMs { get; set; }     // Time offset in milliseconds
         public double DurationMs { get; set; } // Duration in milliseconds
     }
+
+
+
 }

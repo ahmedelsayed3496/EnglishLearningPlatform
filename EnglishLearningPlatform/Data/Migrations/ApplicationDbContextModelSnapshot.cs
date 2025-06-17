@@ -107,12 +107,24 @@ namespace EnglishLearningPlatform.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FlashcardId"));
 
+                    b.Property<int>("ConsecutiveCorrectAnswers")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CorrectReviews")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("ExampleAudioPath")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ExampleSentence")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("LastReviewedAt")
+                        .HasColumnType("datetime2");
 
                     b.Property<int?>("LessonId")
                         .HasColumnType("int");
@@ -121,11 +133,26 @@ namespace EnglishLearningPlatform.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("MeaningAudioPath")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("NextReviewDue")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("RepetitionLevel")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TotalReviews")
+                        .HasColumnType("int");
+
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Word")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("WordAudioPath")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("FlashcardId");

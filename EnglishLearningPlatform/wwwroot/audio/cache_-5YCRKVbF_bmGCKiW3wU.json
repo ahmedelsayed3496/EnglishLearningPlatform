@@ -1,0 +1,104 @@
+[
+  {
+    "Index": 0,
+    "Word": "After",
+    "OffsetMs": 52,
+    "DurationMs": 315.812
+  },
+  {
+    "Index": 1,
+    "Word": "my",
+    "OffsetMs": 381,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 2,
+    "Word": "bout",
+    "OffsetMs": 526,
+    "DurationMs": 223.687
+  },
+  {
+    "Index": 3,
+    "Word": "with",
+    "OffsetMs": 763,
+    "DurationMs": 144.75
+  },
+  {
+    "Index": 4,
+    "Word": "Guillan-Barre",
+    "OffsetMs": 921,
+    "DurationMs": 526.312
+  },
+  {
+    "Index": 5,
+    "Word": "Syndrome,",
+    "OffsetMs": 1460,
+    "DurationMs": 526.312
+  },
+  {
+    "Index": 6,
+    "Word": "it",
+    "OffsetMs": 2092,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 7,
+    "Word": "took",
+    "OffsetMs": 2197,
+    "DurationMs": 65.812
+  },
+  {
+    "Index": 8,
+    "Word": "me",
+    "OffsetMs": 2276,
+    "DurationMs": 184.187
+  },
+  {
+    "Index": 9,
+    "Word": "6",
+    "OffsetMs": 2473,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 10,
+    "Word": "months",
+    "OffsetMs": 2605,
+    "DurationMs": 315.812
+  },
+  {
+    "Index": 11,
+    "Word": "to",
+    "OffsetMs": 2934,
+    "DurationMs": 342.125
+  },
+  {
+    "Index": 12,
+    "Word": "be",
+    "OffsetMs": 3342,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 13,
+    "Word": "up",
+    "OffsetMs": 3434,
+    "DurationMs": 157.875
+  },
+  {
+    "Index": 14,
+    "Word": "and",
+    "OffsetMs": 3605,
+    "DurationMs": 197.375
+  },
+  {
+    "Index": 15,
+    "Word": "about",
+    "OffsetMs": 3868,
+    "DurationMs": 144.75
+  },
+  {
+    "Index": 16,
+    "Word": "again.",
+    "OffsetMs": 4026,
+    "DurationMs": 250
+  }
+]

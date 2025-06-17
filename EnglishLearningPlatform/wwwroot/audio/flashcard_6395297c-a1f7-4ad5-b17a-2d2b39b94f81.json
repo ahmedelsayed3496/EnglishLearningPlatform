@@ -1,0 +1,44 @@
+[
+  {
+    "Index": 0,
+    "Word": "A",
+    "OffsetMs": 52,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 1,
+    "Word": "place",
+    "OffsetMs": 184,
+    "DurationMs": 368.437
+  },
+  {
+    "Index": 2,
+    "Word": "where",
+    "OffsetMs": 565,
+    "DurationMs": 157.875
+  },
+  {
+    "Index": 3,
+    "Word": "students",
+    "OffsetMs": 736,
+    "DurationMs": 486.812
+  },
+  {
+    "Index": 4,
+    "Word": "go",
+    "OffsetMs": 1236,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 5,
+    "Word": "to",
+    "OffsetMs": 1381,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 6,
+    "Word": "study.",
+    "OffsetMs": 1500,
+    "DurationMs": 513.187
+  }
+]

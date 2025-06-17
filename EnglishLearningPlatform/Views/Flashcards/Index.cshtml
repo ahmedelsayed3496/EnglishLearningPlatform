@@ -1,46 +1,160 @@
 ﻿@model IEnumerable<EnglishLearningPlatform.Models.Flashcard>
 @{
-    ViewData["Title"] = "My Flashcards";
+    ViewData["Title"] = "";
+    Layout = "_LessonIndexLayout";
+
+    // Pagination settings
+    int pageSize = 12;
+    int currentPage = ViewBag.CurrentPage ?? 1;
+    int totalCards = ViewBag.TotalCards ?? 0;
+    int totalPages = (int)Math.Ceiling((double)totalCards / pageSize);
 }
 
-<h2>@ViewData["Title"]</h2>
-
-<a class="btn btn-primary mb-3" asp-action="Create">Add New Flashcard</a>
-
-@if (!Model.Any())
-{
-    <p>You haven't saved any flashcards yet.</p>
+@section Styles {
+    <link rel="stylesheet" href="~/css/flashcards.css" asp-append-version="true" />
 }
-else
-{
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>Word</th>
-                <th>Meaning</th>
-                <th>Example</th>
-                <th>Created At</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
+
+<div class="container py-4 flashcard-container-white">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="display-6">@ViewData["Title"]</h1>
+        <a asp-action="Create" class="btn btn-primary">
+            <i class="bi bi-plus-circle"></i> Create New Flashcard
+        </a>
+    </div>
+
+    <!-- View mode toggle buttons -->
+    <div class="view-toggle-container d-flex justify-content-center mb-4">
+        <div class="btn-group">
+            <a href="@Url.Action("Index", "Flashcards")"
+               class="btn view-mode-btn active">
+                <i class="bi bi-grid me-2"></i> All Flashcards
+            </a>
+            <a href="@Url.Action("Study", "Flashcards")"
+               class="btn view-mode-btn">
+                <i class="bi bi-mortarboard me-2"></i> Study
+            </a>
+        </div>
+    </div>
+
+    @if (!Model.Any())
+    {
+        <div class="flashcards-empty-state">
+            <i class="bi bi-card-text"></i>
+            <h4>You haven't created any flashcards yet</h4>
+            <p class="text-muted">Create your first flashcard to start learning!</p>
+            <a asp-action="Create" class="btn btn-primary mt-2">
+                <i class="bi bi-plus-circle"></i> Create Flashcard
+            </a>
+        </div>
+    }
+    else
+    {
+        <div class="flashcard-grid">
             @foreach (var flashcard in Model)
             {
-                <tr>
-                    <td>@flashcard.Word</td>
-                    <td>@flashcard.Meaning</td>
-                    <td>@flashcard.ExampleSentence</td>
-                    <td>@flashcard.CreatedAt</td>
-                    <td>
-                        <form asp-action="Delete" asp-route-id="@flashcard.FlashcardId" method="post" class="delete-form" style="display:inline;">
-                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                <div class="flashcard-item">
+                    <div class="flashcard-header">
+                        <h3 class="card-title">
+                            @flashcard.Word
+                            @if (!string.IsNullOrEmpty(flashcard.WordAudioPath))
+                            {
+                                <button class="play-audio ms-2"
+                                        data-audio-src="@flashcard.WordAudioPath">
+                                    <i class="bi bi-volume-up"></i>
+                                </button>
+                            }
+                        </h3>
+                        <form asp-action="Delete" asp-route-id="@flashcard.FlashcardId" method="post" class="delete-form">
+                            <button type="submit" class="delete-btn">
+                                <i class="bi bi-trash"></i>
+                            </button>
                         </form>
-                    </td>
-                </tr>
+                    </div>
+
+                    <div class="flashcard-section">
+                        <h5>Definition</h5>
+                        <p class="card-text d-flex justify-content-between align-items-start">
+                            <span>@flashcard.Meaning</span>
+                            @if (!string.IsNullOrEmpty(flashcard.MeaningAudioPath))
+                            {
+                                <button class="play-audio ms-2 flex-shrink-0 align-self-start"
+                                        data-audio-src="@flashcard.MeaningAudioPath">
+                                    <i class="bi bi-volume-up"></i>
+                                </button>
+                            }
+                        </p>
+                    </div>
+
+                    @if (!string.IsNullOrEmpty(flashcard.ExampleSentence))
+                    {
+                        <div class="flashcard-section">
+                            <h5>Example</h5>
+                            <p class="card-text d-flex justify-content-between align-items-start">
+                                <span class="fst-italic">"@flashcard.ExampleSentence"</span>
+                                @if (!string.IsNullOrEmpty(flashcard.ExampleAudioPath))
+                                {
+                                    <button class="play-audio ms-2 flex-shrink-0 align-self-start"
+                                            data-audio-src="@flashcard.ExampleAudioPath">
+                                        <i class="bi bi-volume-up"></i>
+                                    </button>
+                                }
+                            </p>
+                        </div>
+                    }
+
+                    @if (flashcard.Lesson != null)
+                    {
+                        <div class="flashcard-source">
+                            <small class="text-muted">
+                                <i class="bi bi-book me-1"></i> From lesson: @flashcard.Lesson.Title
+                            </small>
+                        </div>
+                    }
+
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small><i class="bi bi-calendar3 me-1"></i> @flashcard.CreatedAt.ToString("MMM dd, yyyy")</small>
+                            @if (flashcard.RepetitionLevel > 0)
+                            {
+                                <span class="badge bg-primary">Level @flashcard.RepetitionLevel</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-secondary">New</span>
+                            }
+                        </div>
+                    </div>
+                </div>
             }
-        </tbody>
-    </table>
-}
+        </div>
+
+        <!-- Pagination -->
+        @if (totalPages > 1)
+        {
+            <nav aria-label="Flashcard pagination">
+                <ul class="pagination">
+                    <li class="page-item @(currentPage == 1 ? "disabled" : "")">
+                        <a class="page-link" href="@Url.Action("Index", new { page = currentPage - 1 })" tabindex="-1">Previous</a>
+                    </li>
+
+                    @for (int i = 1; i <= totalPages; i++)
+                    {
+                        <li class="page-item @(i == currentPage ? "active" : "")">
+                            <a class="page-link" href="@Url.Action("Index", new { page = i })">@i</a>
+                        </li>
+                    }
+
+                    <li class="page-item @(currentPage == totalPages ? "disabled" : "")">
+                        <a class="page-link" href="@Url.Action("Index", new { page = currentPage + 1 })">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        }
+    }
+</div>
+
+<!-- Hidden audio element for playback -->
+<audio id="audio-player" class="d-none"></audio>
 
 @section Scripts {
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -61,6 +175,44 @@ else
                         form.submit();
                     }
                 });
+            });
+        });
+
+        // Audio playback functionality
+        const audioPlayer = document.getElementById('audio-player');
+        document.querySelectorAll('.play-audio').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.stopPropagation(); // Prevent any parent clicks
+                const audioSrc = this.getAttribute('data-audio-src');
+                if (audioSrc) {
+                    // Stop any currently playing audio
+                    audioPlayer.pause();
+                    audioPlayer.src = audioSrc;
+
+                    // Reset all icons first
+                    document.querySelectorAll('.play-audio i').forEach(icon => {
+                        icon.className = 'bi bi-volume-up';
+                    });
+
+                    // Show loading while audio loads
+                    const icon = this.querySelector('i');
+                    icon.className = 'bi bi-hourglass-split';
+
+                    // Play the audio
+                    audioPlayer.play()
+                        .then(() => {
+                            icon.className = 'bi bi-volume-down-fill';
+                        })
+                        .catch(error => {
+                            console.error('Audio playback failed:', error);
+                            icon.className = 'bi bi-volume-up';
+                        });
+
+                    // Reset icon when audio ends
+                    audioPlayer.onended = function() {
+                        icon.className = 'bi bi-volume-up';
+                    };
+                }
             });
         });
     </script>

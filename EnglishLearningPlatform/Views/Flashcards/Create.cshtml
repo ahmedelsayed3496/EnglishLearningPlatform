@@ -1,41 +1,174 @@
-﻿@model Flashcard
+﻿@model EnglishLearningPlatform.Models.Flashcard
 
 @{
     ViewData["Title"] = "Create Flashcard";
-
+    Layout = "_LessonIndexLayout";
 }
 
+@section Styles {
+    <link rel="stylesheet" href="~/css/flashcards.css" asp-append-version="true" />
+}
 
-<form asp-action="Create" method="post">
-    <div class="form-group">
-        <label asp-for="Word"></label>
-        <input asp-for="Word" class="form-control" />
-        <span asp-validation-for="Word" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Meaning"></label>
-        <input asp-for="Meaning" class="form-control" />
-        <span asp-validation-for="Meaning" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="ExampleSentence"></label>
-        <input asp-for="ExampleSentence" class="form-control" />
-        <span asp-validation-for="ExampleSentence" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="LessonId">Lesson</label>
-        <select asp-for="LessonId" class="form-control" asp-items="@(new SelectList(ViewBag.Lessons, "LessonId", "Title"))">
-            <option value="">-- None --</option>
-        </select>
-        <span asp-validation-for="LessonId" class="text-danger"></span>
-    </div>
-    <button type="submit" class="btn btn-primary">Save</button>
-</form>
+<div class="create-flashcard-bg">
+    <div class="container py-2">
+        <div class="row">
+            <div class="col-lg-9 mx-auto">
+                <div class="create-flashcard-container">
+                    <div class="create-flashcard-header">
+                        <h3><i class="bi bi-plus-square me-2"></i> Create New Flashcard</h3>
+                    </div>
+                    <div class="create-flashcard-body">
+                        <div class="create-flashcard-preview mb-4">
+                            <h5><i class="bi bi-eye me-2"></i> Preview</h5>
+                            <div class="preview-word" id="previewWord">Word</div>
+                            <div class="preview-meaning" id="previewMeaning">Definition will appear here</div>
+                            <div class="preview-example" id="previewExample">Example sentence will appear here</div>
+                        </div>
 
+                        <form asp-action="Create" method="post">
+                            <div asp-validation-summary="ModelOnly" class="text-danger mb-4"></div>
 
+                            <div class="form-group-flashcard">
+                                <label asp-for="Word" class="form-label">Word or Phrase <span class="text-danger">*</span></label>
+                                <div class="input-group">
+                                    <input asp-for="Word" class="form-control" required placeholder="Enter the word you want to learn" />
+                                    <button type="button" class="btn btn-outline-secondary generate-audio-btn" id="wordAudioBtn" disabled>
+                                        <i class="bi bi-volume-up"></i>
+                                    </button>
+                                </div>
+                                <span asp-validation-for="Word" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group-flashcard">
+                                <label asp-for="Meaning" class="form-label">Definition <span class="text-danger">*</span></label>
+                                <div class="input-group">
+                                    <textarea asp-for="Meaning" class="form-control" rows="3" placeholder="Enter the meaning or definition"></textarea>
+                                    <button type="button" class="btn btn-outline-secondary generate-audio-btn" id="meaningAudioBtn" disabled>
+                                        <i class="bi bi-volume-up"></i>
+                                    </button>
+                                </div>
+                                <span asp-validation-for="Meaning" class="text-danger"></span>
+                                <div class="form-text">A clear definition helps with understanding and memory</div>
+                            </div>
+
+                            <div class="form-group-flashcard">
+                                <label asp-for="ExampleSentence" class="form-label">Example Sentence</label>
+                                <div class="input-group">
+                                    <textarea asp-for="ExampleSentence" class="form-control" rows="2" placeholder="Enter an example sentence using this word"></textarea>
+                                    <button type="button" class="btn btn-outline-secondary generate-audio-btn" id="exampleAudioBtn" disabled>
+                                        <i class="bi bi-volume-up"></i>
+                                    </button>
+                                </div>
+                                <span asp-validation-for="ExampleSentence" class="text-danger"></span>
+                                <div class="form-text">An example sentence provides context and improves memory retention</div>
+                            </div>
+
+                            <div class="form-group-flashcard">
+                                <label asp-for="LessonId" class="form-label">Associate with Lesson (Optional)</label>
+                                <select asp-for="LessonId" class="form-select">
+                                    <option value="">-- None --</option>
+                                    @foreach (var lesson in ViewBag.Lessons)
+                                    {
+                                        if (lesson.LessonId == ViewBag.SelectedLessonId)
+                                        {
+                                            <option value="@lesson.LessonId" selected>@lesson.Title</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="@lesson.LessonId">@lesson.Title</option>
+                                        }
+                                    }
+                                </select>
+                                <div class="form-text">Organizing flashcards by lessons helps with structured learning</div>
+                            </div>
+
+                            <div class="audio-generation-section">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="generateAudio" name="GenerateAudio" value="true" checked>
+                                    <label class="form-check-label" for="generateAudio">
+                                        Generate audio for pronunciation practice
+                                    </label>
+                                </div>
+                                <div class="form-text">
+                                    <i class="bi bi-info-circle me-1"></i> Audio will be automatically generated for the word, definition, and example
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <div>
+                                    <a asp-action="Index" class="btn btn-outline-secondary">
+                                        <i class="bi bi-arrow-left me-1"></i> Back to Flashcards
+                                    </a>
+                                </div>
+                                <div>
+                                    <button type="reset" class="btn btn-outline-secondary me-2">
+                                        <i class="bi bi-arrow-counterclockwise me-1"></i> Reset
+                                    </button>
+                                    <button type="submit" class="btn btn-create-flashcard">
+                                        <i class="bi bi-plus-circle me-1"></i> Create Flashcard
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Preview functionality
+            const wordInput = document.getElementById('Word');
+            const meaningInput = document.getElementById('Meaning');
+            const exampleInput = document.getElementById('ExampleSentence');
+
+            const previewWord = document.getElementById('previewWord');
+            const previewMeaning = document.getElementById('previewMeaning');
+            const previewExample = document.getElementById('previewExample');
+
+            // Update preview as user types
+            wordInput.addEventListener('input', function() {
+                previewWord.textContent = this.value || 'Word';
+            });
+
+            meaningInput.addEventListener('input', function() {
+                previewMeaning.textContent = this.value || 'Definition will appear here';
+            });
+
+            exampleInput.addEventListener('input', function() {
+                previewExample.textContent = this.value || 'Example sentence will appear here';
+            });
+
+            // Enable/disable audio buttons based on input
+            const audioButtons = document.querySelectorAll('.generate-audio-btn');
+
+            wordInput.addEventListener('input', function() {
+                document.getElementById('wordAudioBtn').disabled = !this.value.trim();
+            });
+
+            meaningInput.addEventListener('input', function() {
+                document.getElementById('meaningAudioBtn').disabled = !this.value.trim();
+            });
+
+            exampleInput.addEventListener('input', function() {
+                document.getElementById('exampleAudioBtn').disabled = !this.value.trim();
+            });
+
+            // Form validation highlighting
+            const form = document.querySelector('form');
+            form.addEventListener('submit', function(e) {
+                if (!form.checkValidity()) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            });
+        });
+    </script>
 }

@@ -1,0 +1,32 @@
+[
+  {
+    "Index": 0,
+    "Word": "miss",
+    "OffsetMs": 52,
+    "DurationMs": 302.625
+  },
+  {
+    "Index": 1,
+    "Word": "on",
+    "OffsetMs": 368,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 2,
+    "Word": "a",
+    "OffsetMs": 500,
+    "DurationMs": 65.812
+  },
+  {
+    "Index": 3,
+    "Word": "good",
+    "OffsetMs": 578,
+    "DurationMs": 184.187
+  },
+  {
+    "Index": 4,
+    "Word": "opportunity",
+    "OffsetMs": 776,
+    "DurationMs": 802.625
+  }
+]

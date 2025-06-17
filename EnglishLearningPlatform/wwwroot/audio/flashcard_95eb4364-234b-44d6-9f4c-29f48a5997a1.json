@@ -1,0 +1,56 @@
+[
+  {
+    "Index": 0,
+    "Word": "he",
+    "OffsetMs": 52,
+    "DurationMs": 171.062
+  },
+  {
+    "Index": 1,
+    "Word": "didn\u0027t",
+    "OffsetMs": 236,
+    "DurationMs": 263.187
+  },
+  {
+    "Index": 2,
+    "Word": "go",
+    "OffsetMs": 513,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 3,
+    "Word": "the",
+    "OffsetMs": 657,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 4,
+    "Word": "interview",
+    "OffsetMs": 776,
+    "DurationMs": 500
+  },
+  {
+    "Index": 5,
+    "Word": "and",
+    "OffsetMs": 1328,
+    "DurationMs": 184.187
+  },
+  {
+    "Index": 6,
+    "Word": "fumble",
+    "OffsetMs": 1526,
+    "DurationMs": 368.437
+  },
+  {
+    "Index": 7,
+    "Word": "the",
+    "OffsetMs": 1907,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 8,
+    "Word": "bag",
+    "OffsetMs": 2026,
+    "DurationMs": 447.375
+  }
+]

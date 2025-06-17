@@ -1,0 +1,20 @@
+[
+  {
+    "Index": 0,
+    "Word": "The",
+    "OffsetMs": 52,
+    "DurationMs": 144.75
+  },
+  {
+    "Index": 1,
+    "Word": "different",
+    "OffsetMs": 210,
+    "DurationMs": 394.75
+  },
+  {
+    "Index": 2,
+    "Word": "ideal.",
+    "OffsetMs": 618,
+    "DurationMs": 552.625
+  }
+]

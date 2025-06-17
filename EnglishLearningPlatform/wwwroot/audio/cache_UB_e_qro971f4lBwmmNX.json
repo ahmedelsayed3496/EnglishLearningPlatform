@@ -1,0 +1,38 @@
+[
+  {
+    "Index": 0,
+    "Word": "I",
+    "OffsetMs": 52,
+    "DurationMs": 144.75
+  },
+  {
+    "Index": 1,
+    "Word": "was",
+    "OffsetMs": 210,
+    "DurationMs": 197.375
+  },
+  {
+    "Index": 2,
+    "Word": "left",
+    "OffsetMs": 421,
+    "DurationMs": 342.125
+  },
+  {
+    "Index": 3,
+    "Word": "my",
+    "OffsetMs": 776,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 4,
+    "Word": "father\u0027s",
+    "OffsetMs": 907,
+    "DurationMs": 473.687
+  },
+  {
+    "Index": 5,
+    "Word": "business.",
+    "OffsetMs": 1394,
+    "DurationMs": 697.375
+  }
+]

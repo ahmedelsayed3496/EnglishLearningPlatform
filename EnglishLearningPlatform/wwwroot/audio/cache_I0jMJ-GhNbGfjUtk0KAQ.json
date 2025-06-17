@@ -1,0 +1,80 @@
+[
+  {
+    "Index": 0,
+    "Word": "He",
+    "OffsetMs": 52,
+    "DurationMs": 157.875
+  },
+  {
+    "Index": 1,
+    "Word": "was",
+    "OffsetMs": 223,
+    "DurationMs": 184.187
+  },
+  {
+    "Index": 2,
+    "Word": "frustrated",
+    "OffsetMs": 421,
+    "DurationMs": 644.75
+  },
+  {
+    "Index": 3,
+    "Word": "because",
+    "OffsetMs": 1144,
+    "DurationMs": 289.5
+  },
+  {
+    "Index": 4,
+    "Word": "he",
+    "OffsetMs": 1447,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 5,
+    "Word": "couldn\u0027t",
+    "OffsetMs": 1552,
+    "DurationMs": 276.312
+  },
+  {
+    "Index": 6,
+    "Word": "find",
+    "OffsetMs": 1842,
+    "DurationMs": 250
+  },
+  {
+    "Index": 7,
+    "Word": "anything",
+    "OffsetMs": 2105,
+    "DurationMs": 368.437
+  },
+  {
+    "Index": 8,
+    "Word": "about",
+    "OffsetMs": 2486,
+    "DurationMs": 263.187
+  },
+  {
+    "Index": 9,
+    "Word": "dinosaurs",
+    "OffsetMs": 2763,
+    "DurationMs": 631.562
+  },
+  {
+    "Index": 10,
+    "Word": "in",
+    "OffsetMs": 3460,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 11,
+    "Word": "the",
+    "OffsetMs": 3578,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 12,
+    "Word": "book.",
+    "OffsetMs": 3671,
+    "DurationMs": 447.375
+  }
+]

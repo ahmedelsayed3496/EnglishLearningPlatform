@@ -1,0 +1,86 @@
+[
+  {
+    "Index": 0,
+    "Word": "The",
+    "OffsetMs": 52,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 1,
+    "Word": "normal",
+    "OffsetMs": 157,
+    "DurationMs": 342.125
+  },
+  {
+    "Index": 2,
+    "Word": "course",
+    "OffsetMs": 513,
+    "DurationMs": 315.812
+  },
+  {
+    "Index": 3,
+    "Word": "of",
+    "OffsetMs": 842,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 4,
+    "Word": "events",
+    "OffsetMs": 947,
+    "DurationMs": 447.375
+  },
+  {
+    "Index": 5,
+    "Word": "seems",
+    "OffsetMs": 1473,
+    "DurationMs": 302.625
+  },
+  {
+    "Index": 6,
+    "Word": "to",
+    "OffsetMs": 1789,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 7,
+    "Word": "be",
+    "OffsetMs": 1894,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 8,
+    "Word": "just",
+    "OffsetMs": 2026,
+    "DurationMs": 289.5
+  },
+  {
+    "Index": 9,
+    "Word": "one",
+    "OffsetMs": 2328,
+    "DurationMs": 210.5
+  },
+  {
+    "Index": 10,
+    "Word": "damned",
+    "OffsetMs": 2552,
+    "DurationMs": 315.812
+  },
+  {
+    "Index": 11,
+    "Word": "thing",
+    "OffsetMs": 2881,
+    "DurationMs": 276.312
+  },
+  {
+    "Index": 12,
+    "Word": "after",
+    "OffsetMs": 3171,
+    "DurationMs": 289.5
+  },
+  {
+    "Index": 13,
+    "Word": "another.",
+    "OffsetMs": 3473,
+    "DurationMs": 513.187
+  }
+]
