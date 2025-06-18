@@ -1,0 +1,368 @@
+[
+  {
+    "Index": 0,
+    "Word": "We",
+    "OffsetMs": 52,
+    "DurationMs": 171.062
+  },
+  {
+    "Index": 1,
+    "Word": "sit",
+    "OffsetMs": 236,
+    "DurationMs": 197.375
+  },
+  {
+    "Index": 2,
+    "Word": "on",
+    "OffsetMs": 447,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 3,
+    "Word": "benches,",
+    "OffsetMs": 592,
+    "DurationMs": 592.125
+  },
+  {
+    "Index": 4,
+    "Word": "pacing",
+    "OffsetMs": 1289,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 5,
+    "Word": "in",
+    "OffsetMs": 1394,
+    "DurationMs": 407.875
+  },
+  {
+    "Index": 6,
+    "Word": "rooms,",
+    "OffsetMs": 1815,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 7,
+    "Word": "scrolling",
+    "OffsetMs": 1934,
+    "DurationMs": 394.75
+  },
+  {
+    "Index": 8,
+    "Word": "endlessly,",
+    "OffsetMs": 2434,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 9,
+    "Word": "worrying",
+    "OffsetMs": 2539,
+    "DurationMs": 513.187
+  },
+  {
+    "Index": 10,
+    "Word": "about",
+    "OffsetMs": 3065,
+    "DurationMs": 513.187
+  },
+  {
+    "Index": 11,
+    "Word": "things",
+    "OffsetMs": 3684,
+    "DurationMs": 144.75
+  },
+  {
+    "Index": 12,
+    "Word": "that",
+    "OffsetMs": 3828,
+    "DurationMs": 315.812
+  },
+  {
+    "Index": 13,
+    "Word": "will",
+    "OffsetMs": 4157,
+    "DurationMs": 250
+  },
+  {
+    "Index": 14,
+    "Word": "never",
+    "OffsetMs": 4421,
+    "DurationMs": 289.5
+  },
+  {
+    "Index": 15,
+    "Word": "happen.",
+    "OffsetMs": 4723,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 16,
+    "Word": "Meanwhile,",
+    "OffsetMs": 4842,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 17,
+    "Word": "the",
+    "OffsetMs": 4973,
+    "DurationMs": 302.625
+  },
+  {
+    "Index": 18,
+    "Word": "clouds",
+    "OffsetMs": 5289,
+    "DurationMs": 486.812
+  },
+  {
+    "Index": 19,
+    "Word": "drift",
+    "OffsetMs": 5789,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 20,
+    "Word": "overhead,",
+    "OffsetMs": 6684,
+    "DurationMs": 605.25
+  },
+  {
+    "Index": 21,
+    "Word": "shapeless",
+    "OffsetMs": 7394,
+    "DurationMs": 65.75
+  },
+  {
+    "Index": 22,
+    "Word": "and",
+    "OffsetMs": 7460,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 23,
+    "Word": "free,",
+    "OffsetMs": 7578,
+    "DurationMs": 394.75
+  },
+  {
+    "Index": 24,
+    "Word": "moving",
+    "OffsetMs": 7986,
+    "DurationMs": 342.125
+  },
+  {
+    "Index": 25,
+    "Word": "without",
+    "OffsetMs": 8342,
+    "DurationMs": 486.812
+  },
+  {
+    "Index": 26,
+    "Word": "permission,",
+    "OffsetMs": 8934,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 27,
+    "Word": "destination,",
+    "OffsetMs": 9065,
+    "DurationMs": 526.312
+  },
+  {
+    "Index": 28,
+    "Word": "or",
+    "OffsetMs": 9605,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 29,
+    "Word": "guilt.",
+    "OffsetMs": 9750,
+    "DurationMs": 355.25
+  },
+  {
+    "Index": 30,
+    "Word": "They",
+    "OffsetMs": 10210,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 31,
+    "Word": "do",
+    "OffsetMs": 10355,
+    "DurationMs": 276.312
+  },
+  {
+    "Index": 32,
+    "Word": "not",
+    "OffsetMs": 10644,
+    "DurationMs": 328.937
+  },
+  {
+    "Index": 33,
+    "Word": "apologize",
+    "OffsetMs": 10986,
+    "DurationMs": 578.937
+  },
+  {
+    "Index": 34,
+    "Word": "for",
+    "OffsetMs": 11671,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 35,
+    "Word": "blocking",
+    "OffsetMs": 11776,
+    "DurationMs": 828.937
+  },
+  {
+    "Index": 36,
+    "Word": "the",
+    "OffsetMs": 12710,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 37,
+    "Word": "sun",
+    "OffsetMs": 12828,
+    "DurationMs": 157.875
+  },
+  {
+    "Index": 38,
+    "Word": "or",
+    "OffsetMs": 13000,
+    "DurationMs": 447.375
+  },
+  {
+    "Index": 39,
+    "Word": "hiding",
+    "OffsetMs": 13460,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 40,
+    "Word": "the",
+    "OffsetMs": 14368,
+    "DurationMs": 144.75
+  },
+  {
+    "Index": 41,
+    "Word": "moon.",
+    "OffsetMs": 14526,
+    "DurationMs": 144.75
+  },
+  {
+    "Index": 42,
+    "Word": "They",
+    "OffsetMs": 14750,
+    "DurationMs": 250
+  },
+  {
+    "Index": 43,
+    "Word": "just",
+    "OffsetMs": 15013,
+    "DurationMs": 750
+  },
+  {
+    "Index": 44,
+    "Word": "are.",
+    "OffsetMs": 15828,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 45,
+    "Word": "If",
+    "OffsetMs": 15973,
+    "DurationMs": 342.125
+  },
+  {
+    "Index": 46,
+    "Word": "only",
+    "OffsetMs": 16328,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 47,
+    "Word": "we",
+    "OffsetMs": 16434,
+    "DurationMs": 368.437
+  },
+  {
+    "Index": 48,
+    "Word": "could",
+    "OffsetMs": 16855,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 49,
+    "Word": "be",
+    "OffsetMs": 17000,
+    "DurationMs": 355.25
+  },
+  {
+    "Index": 50,
+    "Word": "more",
+    "OffsetMs": 17368,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 51,
+    "Word": "like",
+    "OffsetMs": 17460,
+    "DurationMs": 447.375
+  },
+  {
+    "Index": 52,
+    "Word": "them",
+    "OffsetMs": 17921,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 53,
+    "Word": "\u2014",
+    "OffsetMs": 18815,
+    "DurationMs": 223.687
+  },
+  {
+    "Index": 54,
+    "Word": "temporary,",
+    "OffsetMs": 19052,
+    "DurationMs": 355.25
+  },
+  {
+    "Index": 55,
+    "Word": "light,",
+    "OffsetMs": 19421,
+    "DurationMs": 355.25
+  },
+  {
+    "Index": 56,
+    "Word": "and",
+    "OffsetMs": 19789,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 57,
+    "Word": "unconcerned",
+    "OffsetMs": 20684,
+    "DurationMs": 184.187
+  },
+  {
+    "Index": 58,
+    "Word": "with",
+    "OffsetMs": 20881,
+    "DurationMs": 263.187
+  },
+  {
+    "Index": 59,
+    "Word": "being",
+    "OffsetMs": 21157,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 60,
+    "Word": "understood.",
+    "OffsetMs": 21289,
+    "DurationMs": 144.75
+  }
+]

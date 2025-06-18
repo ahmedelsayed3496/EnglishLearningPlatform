@@ -1,0 +1,518 @@
+[
+  {
+    "Index": 0,
+    "Word": "Nobody",
+    "OffsetMs": 52,
+    "DurationMs": 447.375
+  },
+  {
+    "Index": 1,
+    "Word": "knew",
+    "OffsetMs": 513,
+    "DurationMs": 197.375
+  },
+  {
+    "Index": 2,
+    "Word": "how",
+    "OffsetMs": 723,
+    "DurationMs": 184.187
+  },
+  {
+    "Index": 3,
+    "Word": "the",
+    "OffsetMs": 921,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 4,
+    "Word": "bookshop",
+    "OffsetMs": 1039,
+    "DurationMs": 447.375
+  },
+  {
+    "Index": 5,
+    "Word": "survived.",
+    "OffsetMs": 1500,
+    "DurationMs": 763.187
+  },
+  {
+    "Index": 6,
+    "Word": "In",
+    "OffsetMs": 2276,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 7,
+    "Word": "a",
+    "OffsetMs": 3171,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 8,
+    "Word": "world",
+    "OffsetMs": 3315,
+    "DurationMs": 65.812
+  },
+  {
+    "Index": 9,
+    "Word": "where",
+    "OffsetMs": 3394,
+    "DurationMs": 342.125
+  },
+  {
+    "Index": 10,
+    "Word": "everything",
+    "OffsetMs": 3750,
+    "DurationMs": 197.375
+  },
+  {
+    "Index": 11,
+    "Word": "was",
+    "OffsetMs": 3960,
+    "DurationMs": 407.875
+  },
+  {
+    "Index": 12,
+    "Word": "digital",
+    "OffsetMs": 4381,
+    "DurationMs": 171.062
+  },
+  {
+    "Index": 13,
+    "Word": "and",
+    "OffsetMs": 4565,
+    "DurationMs": 526.312
+  },
+  {
+    "Index": 14,
+    "Word": "silence",
+    "OffsetMs": 5171,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 15,
+    "Word": "was",
+    "OffsetMs": 5315,
+    "DurationMs": 434.187
+  },
+  {
+    "Index": 16,
+    "Word": "rare,",
+    "OffsetMs": 5763,
+    "DurationMs": 171.062
+  },
+  {
+    "Index": 17,
+    "Word": "this",
+    "OffsetMs": 5947,
+    "DurationMs": 328.937
+  },
+  {
+    "Index": 18,
+    "Word": "little",
+    "OffsetMs": 6381,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 19,
+    "Word": "store",
+    "OffsetMs": 6473,
+    "DurationMs": 210.5
+  },
+  {
+    "Index": 20,
+    "Word": "at",
+    "OffsetMs": 6697,
+    "DurationMs": 210.5
+  },
+  {
+    "Index": 21,
+    "Word": "the",
+    "OffsetMs": 6921,
+    "DurationMs": 434.187
+  },
+  {
+    "Index": 22,
+    "Word": "edge",
+    "OffsetMs": 7434,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 23,
+    "Word": "of",
+    "OffsetMs": 7526,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 24,
+    "Word": "the",
+    "OffsetMs": 7618,
+    "DurationMs": 210.5
+  },
+  {
+    "Index": 25,
+    "Word": "city",
+    "OffsetMs": 7842,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 26,
+    "Word": "stood",
+    "OffsetMs": 7934,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 27,
+    "Word": "untouched.",
+    "OffsetMs": 8052,
+    "DurationMs": 394.75
+  },
+  {
+    "Index": 28,
+    "Word": "The",
+    "OffsetMs": 8526,
+    "DurationMs": 302.625
+  },
+  {
+    "Index": 29,
+    "Word": "door",
+    "OffsetMs": 8842,
+    "DurationMs": 697.375
+  },
+  {
+    "Index": 30,
+    "Word": "creaked",
+    "OffsetMs": 9552,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 31,
+    "Word": "like",
+    "OffsetMs": 10447,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 32,
+    "Word": "it",
+    "OffsetMs": 10592,
+    "DurationMs": 276.312
+  },
+  {
+    "Index": 33,
+    "Word": "had",
+    "OffsetMs": 10881,
+    "DurationMs": 368.437
+  },
+  {
+    "Index": 34,
+    "Word": "a",
+    "OffsetMs": 11263,
+    "DurationMs": 184.187
+  },
+  {
+    "Index": 35,
+    "Word": "soul,",
+    "OffsetMs": 11460,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 36,
+    "Word": "and",
+    "OffsetMs": 11552,
+    "DurationMs": 184.187
+  },
+  {
+    "Index": 37,
+    "Word": "dust",
+    "OffsetMs": 11750,
+    "DurationMs": 52.625
+  },
+  {
+    "Index": 38,
+    "Word": "danced",
+    "OffsetMs": 11815,
+    "DurationMs": 394.75
+  },
+  {
+    "Index": 39,
+    "Word": "in",
+    "OffsetMs": 12315,
+    "DurationMs": 118.375
+  },
+  {
+    "Index": 40,
+    "Word": "the",
+    "OffsetMs": 12434,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 41,
+    "Word": "sunlight",
+    "OffsetMs": 12526,
+    "DurationMs": 355.25
+  },
+  {
+    "Index": 42,
+    "Word": "like",
+    "OffsetMs": 12947,
+    "DurationMs": 381.562
+  },
+  {
+    "Index": 43,
+    "Word": "spirits",
+    "OffsetMs": 13342,
+    "DurationMs": 52.625
+  },
+  {
+    "Index": 44,
+    "Word": "returning",
+    "OffsetMs": 13407,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 45,
+    "Word": "home.",
+    "OffsetMs": 13513,
+    "DurationMs": 526.312
+  },
+  {
+    "Index": 46,
+    "Word": "Every",
+    "OffsetMs": 14118,
+    "DurationMs": 171.062
+  },
+  {
+    "Index": 47,
+    "Word": "book",
+    "OffsetMs": 14302,
+    "DurationMs": 500
+  },
+  {
+    "Index": 48,
+    "Word": "seemed",
+    "OffsetMs": 14815,
+    "DurationMs": 447.375
+  },
+  {
+    "Index": 49,
+    "Word": "to",
+    "OffsetMs": 15276,
+    "DurationMs": 407.875
+  },
+  {
+    "Index": 50,
+    "Word": "whisper",
+    "OffsetMs": 15697,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 51,
+    "Word": "when",
+    "OffsetMs": 16592,
+    "DurationMs": 342.125
+  },
+  {
+    "Index": 52,
+    "Word": "touched,",
+    "OffsetMs": 16947,
+    "DurationMs": 236.812
+  },
+  {
+    "Index": 53,
+    "Word": "as",
+    "OffsetMs": 17197,
+    "DurationMs": 263.187
+  },
+  {
+    "Index": 54,
+    "Word": "if",
+    "OffsetMs": 17473,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 55,
+    "Word": "trying",
+    "OffsetMs": 17578,
+    "DurationMs": 421.062
+  },
+  {
+    "Index": 56,
+    "Word": "to",
+    "OffsetMs": 18065,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 57,
+    "Word": "tell",
+    "OffsetMs": 18210,
+    "DurationMs": 473.687
+  },
+  {
+    "Index": 58,
+    "Word": "you",
+    "OffsetMs": 18789,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 59,
+    "Word": "its",
+    "OffsetMs": 18894,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 60,
+    "Word": "story",
+    "OffsetMs": 19026,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 61,
+    "Word": "before",
+    "OffsetMs": 19118,
+    "DurationMs": 276.312
+  },
+  {
+    "Index": 62,
+    "Word": "you",
+    "OffsetMs": 19407,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 63,
+    "Word": "even",
+    "OffsetMs": 19513,
+    "DurationMs": 223.687
+  },
+  {
+    "Index": 64,
+    "Word": "opened",
+    "OffsetMs": 19750,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 65,
+    "Word": "the",
+    "OffsetMs": 19868,
+    "DurationMs": 144.75
+  },
+  {
+    "Index": 66,
+    "Word": "cover.",
+    "OffsetMs": 20026,
+    "DurationMs": 394.75
+  },
+  {
+    "Index": 67,
+    "Word": "Some",
+    "OffsetMs": 20473,
+    "DurationMs": 342.125
+  },
+  {
+    "Index": 68,
+    "Word": "said",
+    "OffsetMs": 20828,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 69,
+    "Word": "the",
+    "OffsetMs": 20947,
+    "DurationMs": 276.312
+  },
+  {
+    "Index": 70,
+    "Word": "shop",
+    "OffsetMs": 21236,
+    "DurationMs": 289.5
+  },
+  {
+    "Index": 71,
+    "Word": "appeared",
+    "OffsetMs": 21539,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 72,
+    "Word": "only",
+    "OffsetMs": 21631,
+    "DurationMs": 460.5
+  },
+  {
+    "Index": 73,
+    "Word": "to",
+    "OffsetMs": 22105,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 74,
+    "Word": "those",
+    "OffsetMs": 23000,
+    "DurationMs": 328.937
+  },
+  {
+    "Index": 75,
+    "Word": "who",
+    "OffsetMs": 23342,
+    "DurationMs": 236.812
+  },
+  {
+    "Index": 76,
+    "Word": "needed",
+    "OffsetMs": 23592,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 77,
+    "Word": "it",
+    "OffsetMs": 23684,
+    "DurationMs": 368.437
+  },
+  {
+    "Index": 78,
+    "Word": "most",
+    "OffsetMs": 24118,
+    "DurationMs": 342.125
+  },
+  {
+    "Index": 79,
+    "Word": "\u2014",
+    "OffsetMs": 24473,
+    "DurationMs": 236.812
+  },
+  {
+    "Index": 80,
+    "Word": "others",
+    "OffsetMs": 24723,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 81,
+    "Word": "claimed",
+    "OffsetMs": 24842,
+    "DurationMs": 210.5
+  },
+  {
+    "Index": 82,
+    "Word": "it",
+    "OffsetMs": 25065,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 83,
+    "Word": "never",
+    "OffsetMs": 25171,
+    "DurationMs": 289.5
+  },
+  {
+    "Index": 84,
+    "Word": "really",
+    "OffsetMs": 25473,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 85,
+    "Word": "existed.",
+    "OffsetMs": 25565,
+    "DurationMs": 407.875
+  }
+]

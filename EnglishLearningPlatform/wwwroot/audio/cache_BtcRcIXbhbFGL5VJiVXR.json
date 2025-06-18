@@ -1,0 +1,26 @@
+[
+  {
+    "Index": 0,
+    "Word": "A",
+    "OffsetMs": 52,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 1,
+    "Word": "man,",
+    "OffsetMs": 184,
+    "DurationMs": 394.75
+  },
+  {
+    "Index": 2,
+    "Word": "a",
+    "OffsetMs": 684,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 3,
+    "Word": "husband",
+    "OffsetMs": 763,
+    "DurationMs": 52.625
+  }
+]

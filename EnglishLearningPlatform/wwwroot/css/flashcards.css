@@ -332,7 +332,7 @@
 }
 
 .progress-bar {
-    background: linear-gradient(to right, var(--primary-purple), var(--dark-purple));
+    background: linear-gradient(to right, var(--primary-purple), var(--dark-purple)) !important;
     transition: width 0.5s ease;
 }
 
@@ -360,6 +360,8 @@
     text-align: center;
     box-shadow: 0 4px 15px rgba(142, 68, 173, 0.1);
     height: 100%;
+    border: 2px solid #d1a4f8; /* Added thicker light purple border */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
     .stat-box h4 {

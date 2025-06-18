@@ -1,0 +1,32 @@
+[
+  {
+    "Index": 0,
+    "Word": "Anything",
+    "OffsetMs": 52,
+    "DurationMs": 447.375
+  },
+  {
+    "Index": 1,
+    "Word": "that",
+    "OffsetMs": 513,
+    "DurationMs": 171.062
+  },
+  {
+    "Index": 2,
+    "Word": "raises",
+    "OffsetMs": 697,
+    "DurationMs": 500
+  },
+  {
+    "Index": 3,
+    "Word": "or",
+    "OffsetMs": 1210,
+    "DurationMs": 184.187
+  },
+  {
+    "Index": 4,
+    "Word": "uplifts.",
+    "OffsetMs": 1407,
+    "DurationMs": 684.187
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "Index": 0,
+    "Word": "To",
+    "OffsetMs": 52,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 1,
+    "Word": "make",
+    "OffsetMs": 184,
+    "DurationMs": 210.5
+  },
+  {
+    "Index": 2,
+    "Word": "the",
+    "OffsetMs": 407,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 3,
+    "Word": "sound",
+    "OffsetMs": 513,
+    "DurationMs": 342.125
+  },
+  {
+    "Index": 4,
+    "Word": "of",
+    "OffsetMs": 868,
+    "DurationMs": 52.625
+  },
+  {
+    "Index": 5,
+    "Word": "a",
+    "OffsetMs": 934,
+    "DurationMs": 65.812
+  },
+  {
+    "Index": 6,
+    "Word": "chime.",
+    "OffsetMs": 1013,
+    "DurationMs": 513.187
+  }
+]

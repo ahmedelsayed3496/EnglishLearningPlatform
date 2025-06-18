@@ -1,0 +1,38 @@
+[
+  {
+    "Index": 0,
+    "Word": "To",
+    "OffsetMs": 52,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 1,
+    "Word": "settle",
+    "OffsetMs": 197,
+    "DurationMs": 355.25
+  },
+  {
+    "Index": 2,
+    "Word": "oneself",
+    "OffsetMs": 565,
+    "DurationMs": 460.5
+  },
+  {
+    "Index": 3,
+    "Word": "comfortably",
+    "OffsetMs": 1039,
+    "DurationMs": 710.5
+  },
+  {
+    "Index": 4,
+    "Word": "and",
+    "OffsetMs": 1828,
+    "DurationMs": 236.812
+  },
+  {
+    "Index": 5,
+    "Word": "snugly.",
+    "OffsetMs": 2078,
+    "DurationMs": 578.937
+  }
+]

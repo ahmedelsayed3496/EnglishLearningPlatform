@@ -1,0 +1,602 @@
+[
+  {
+    "Index": 0,
+    "Word": "In",
+    "OffsetMs": 52,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 1,
+    "Word": "the",
+    "OffsetMs": 184,
+    "DurationMs": 65.812
+  },
+  {
+    "Index": 2,
+    "Word": "heart",
+    "OffsetMs": 263,
+    "DurationMs": 263.187
+  },
+  {
+    "Index": 3,
+    "Word": "of",
+    "OffsetMs": 539,
+    "DurationMs": 65.812
+  },
+  {
+    "Index": 4,
+    "Word": "an",
+    "OffsetMs": 618,
+    "DurationMs": 157.875
+  },
+  {
+    "Index": 5,
+    "Word": "old",
+    "OffsetMs": 789,
+    "DurationMs": 210.5
+  },
+  {
+    "Index": 6,
+    "Word": "European",
+    "OffsetMs": 1013,
+    "DurationMs": 486.812
+  },
+  {
+    "Index": 7,
+    "Word": "village,",
+    "OffsetMs": 1513,
+    "DurationMs": 486.812
+  },
+  {
+    "Index": 8,
+    "Word": "nestled",
+    "OffsetMs": 2105,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 9,
+    "Word": "between",
+    "OffsetMs": 2197,
+    "DurationMs": 368.437
+  },
+  {
+    "Index": 10,
+    "Word": "two",
+    "OffsetMs": 2578,
+    "DurationMs": 328.937
+  },
+  {
+    "Index": 11,
+    "Word": "forgotten",
+    "OffsetMs": 2921,
+    "DurationMs": 210.5
+  },
+  {
+    "Index": 12,
+    "Word": "alleyways,",
+    "OffsetMs": 3144,
+    "DurationMs": 473.687
+  },
+  {
+    "Index": 13,
+    "Word": "stood",
+    "OffsetMs": 3631,
+    "DurationMs": 592.125
+  },
+  {
+    "Index": 14,
+    "Word": "a",
+    "OffsetMs": 4328,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 15,
+    "Word": "dusty",
+    "OffsetMs": 4434,
+    "DurationMs": 210.5
+  },
+  {
+    "Index": 16,
+    "Word": "little",
+    "OffsetMs": 4657,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 17,
+    "Word": "clock",
+    "OffsetMs": 4750,
+    "DurationMs": 381.562
+  },
+  {
+    "Index": 18,
+    "Word": "shop.",
+    "OffsetMs": 5144,
+    "DurationMs": 223.687
+  },
+  {
+    "Index": 19,
+    "Word": "Its",
+    "OffsetMs": 5381,
+    "DurationMs": 276.312
+  },
+  {
+    "Index": 20,
+    "Word": "owner,",
+    "OffsetMs": 5671,
+    "DurationMs": 394.75
+  },
+  {
+    "Index": 21,
+    "Word": "Mr.",
+    "OffsetMs": 6078,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 22,
+    "Word": "Ellion,",
+    "OffsetMs": 6986,
+    "DurationMs": 223.687
+  },
+  {
+    "Index": 23,
+    "Word": "was",
+    "OffsetMs": 7223,
+    "DurationMs": 342.125
+  },
+  {
+    "Index": 24,
+    "Word": "rarely",
+    "OffsetMs": 7671,
+    "DurationMs": 65.75
+  },
+  {
+    "Index": 25,
+    "Word": "seen",
+    "OffsetMs": 7736,
+    "DurationMs": 394.75
+  },
+  {
+    "Index": 26,
+    "Word": "but",
+    "OffsetMs": 8144,
+    "DurationMs": 368.437
+  },
+  {
+    "Index": 27,
+    "Word": "always",
+    "OffsetMs": 8618,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 28,
+    "Word": "heard",
+    "OffsetMs": 8750,
+    "DurationMs": 171.062
+  },
+  {
+    "Index": 29,
+    "Word": "\u2014",
+    "OffsetMs": 8934,
+    "DurationMs": 394.75
+  },
+  {
+    "Index": 30,
+    "Word": "his",
+    "OffsetMs": 9342,
+    "DurationMs": 407.875
+  },
+  {
+    "Index": 31,
+    "Word": "clocks",
+    "OffsetMs": 9815,
+    "DurationMs": 157.875
+  },
+  {
+    "Index": 32,
+    "Word": "chimed",
+    "OffsetMs": 9986,
+    "DurationMs": 368.437
+  },
+  {
+    "Index": 33,
+    "Word": "in",
+    "OffsetMs": 10368,
+    "DurationMs": 236.812
+  },
+  {
+    "Index": 34,
+    "Word": "perfect",
+    "OffsetMs": 10697,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 35,
+    "Word": "harmony",
+    "OffsetMs": 10776,
+    "DurationMs": 157.875
+  },
+  {
+    "Index": 36,
+    "Word": "every",
+    "OffsetMs": 10947,
+    "DurationMs": 368.437
+  },
+  {
+    "Index": 37,
+    "Word": "hour,",
+    "OffsetMs": 11328,
+    "DurationMs": 315.812
+  },
+  {
+    "Index": 38,
+    "Word": "filling",
+    "OffsetMs": 11657,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 39,
+    "Word": "the",
+    "OffsetMs": 11763,
+    "DurationMs": 394.75
+  },
+  {
+    "Index": 40,
+    "Word": "streets",
+    "OffsetMs": 12171,
+    "DurationMs": 473.687
+  },
+  {
+    "Index": 41,
+    "Word": "with",
+    "OffsetMs": 12723,
+    "DurationMs": 342.125
+  },
+  {
+    "Index": 42,
+    "Word": "a",
+    "OffsetMs": 13078,
+    "DurationMs": 355.25
+  },
+  {
+    "Index": 43,
+    "Word": "symphony",
+    "OffsetMs": 13539,
+    "DurationMs": 92.062
+  },
+  {
+    "Index": 44,
+    "Word": "of",
+    "OffsetMs": 13631,
+    "DurationMs": 263.187
+  },
+  {
+    "Index": 45,
+    "Word": "time.",
+    "OffsetMs": 13907,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 46,
+    "Word": "Locals",
+    "OffsetMs": 14013,
+    "DurationMs": 394.75
+  },
+  {
+    "Index": 47,
+    "Word": "whispered",
+    "OffsetMs": 14421,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 48,
+    "Word": "that",
+    "OffsetMs": 14539,
+    "DurationMs": 52.625
+  },
+  {
+    "Index": 49,
+    "Word": "one",
+    "OffsetMs": 14605,
+    "DurationMs": 460.5
+  },
+  {
+    "Index": 50,
+    "Word": "of",
+    "OffsetMs": 15078,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 51,
+    "Word": "his",
+    "OffsetMs": 15171,
+    "DurationMs": 447.375
+  },
+  {
+    "Index": 52,
+    "Word": "clocks",
+    "OffsetMs": 15631,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 53,
+    "Word": "didn\u0027t",
+    "OffsetMs": 16526,
+    "DurationMs": 460.5
+  },
+  {
+    "Index": 54,
+    "Word": "just",
+    "OffsetMs": 17000,
+    "DurationMs": 473.687
+  },
+  {
+    "Index": 55,
+    "Word": "tell",
+    "OffsetMs": 17526,
+    "DurationMs": 144.75
+  },
+  {
+    "Index": 56,
+    "Word": "time",
+    "OffsetMs": 17684,
+    "DurationMs": 157.875
+  },
+  {
+    "Index": 57,
+    "Word": "but",
+    "OffsetMs": 17855,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 58,
+    "Word": "could",
+    "OffsetMs": 17947,
+    "DurationMs": 157.875
+  },
+  {
+    "Index": 59,
+    "Word": "bend",
+    "OffsetMs": 18118,
+    "DurationMs": 486.812
+  },
+  {
+    "Index": 60,
+    "Word": "it.",
+    "OffsetMs": 18671,
+    "DurationMs": 250
+  },
+  {
+    "Index": 61,
+    "Word": "Rumors",
+    "OffsetMs": 18934,
+    "DurationMs": 210.5
+  },
+  {
+    "Index": 62,
+    "Word": "spread",
+    "OffsetMs": 19157,
+    "DurationMs": 210.5
+  },
+  {
+    "Index": 63,
+    "Word": "that",
+    "OffsetMs": 19381,
+    "DurationMs": 355.25
+  },
+  {
+    "Index": 64,
+    "Word": "those",
+    "OffsetMs": 19815,
+    "DurationMs": 157.875
+  },
+  {
+    "Index": 65,
+    "Word": "who",
+    "OffsetMs": 19986,
+    "DurationMs": 210.5
+  },
+  {
+    "Index": 66,
+    "Word": "managed",
+    "OffsetMs": 20210,
+    "DurationMs": 276.312
+  },
+  {
+    "Index": 67,
+    "Word": "to",
+    "OffsetMs": 20500,
+    "DurationMs": 197.375
+  },
+  {
+    "Index": 68,
+    "Word": "hear",
+    "OffsetMs": 20710,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 69,
+    "Word": "its",
+    "OffsetMs": 21618,
+    "DurationMs": 394.75
+  },
+  {
+    "Index": 70,
+    "Word": "silent",
+    "OffsetMs": 22026,
+    "DurationMs": 342.125
+  },
+  {
+    "Index": 71,
+    "Word": "tick",
+    "OffsetMs": 22381,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 72,
+    "Word": "would",
+    "OffsetMs": 22513,
+    "DurationMs": 210.5
+  },
+  {
+    "Index": 73,
+    "Word": "vanish,",
+    "OffsetMs": 22736,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 74,
+    "Word": "reappearing",
+    "OffsetMs": 22842,
+    "DurationMs": 407.875
+  },
+  {
+    "Index": 75,
+    "Word": "years",
+    "OffsetMs": 23263,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 76,
+    "Word": "later,",
+    "OffsetMs": 23355,
+    "DurationMs": 223.687
+  },
+  {
+    "Index": 77,
+    "Word": "unchanged.",
+    "OffsetMs": 23592,
+    "DurationMs": 157.875
+  },
+  {
+    "Index": 78,
+    "Word": "Whether",
+    "OffsetMs": 23763,
+    "DurationMs": 407.875
+  },
+  {
+    "Index": 79,
+    "Word": "it",
+    "OffsetMs": 24184,
+    "DurationMs": 223.687
+  },
+  {
+    "Index": 80,
+    "Word": "was",
+    "OffsetMs": 24473,
+    "DurationMs": 157.875
+  },
+  {
+    "Index": 81,
+    "Word": "magic",
+    "OffsetMs": 24644,
+    "DurationMs": 513.187
+  },
+  {
+    "Index": 82,
+    "Word": "or",
+    "OffsetMs": 25263,
+    "DurationMs": 92.062
+  },
+  {
+    "Index": 83,
+    "Word": "madness,",
+    "OffsetMs": 25355,
+    "DurationMs": 526.312
+  },
+  {
+    "Index": 84,
+    "Word": "no",
+    "OffsetMs": 25894,
+    "DurationMs": 236.812
+  },
+  {
+    "Index": 85,
+    "Word": "one",
+    "OffsetMs": 26144,
+    "DurationMs": 368.437
+  },
+  {
+    "Index": 86,
+    "Word": "dared",
+    "OffsetMs": 26618,
+    "DurationMs": 92.062
+  },
+  {
+    "Index": 87,
+    "Word": "ask",
+    "OffsetMs": 26710,
+    "DurationMs": 776.312
+  },
+  {
+    "Index": 88,
+    "Word": "Mr.",
+    "OffsetMs": 27500,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 89,
+    "Word": "Ellion",
+    "OffsetMs": 28407,
+    "DurationMs": 302.625
+  },
+  {
+    "Index": 90,
+    "Word": "directly",
+    "OffsetMs": 28723,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 91,
+    "Word": "\u2014",
+    "OffsetMs": 28815,
+    "DurationMs": 157.875
+  },
+  {
+    "Index": 92,
+    "Word": "but",
+    "OffsetMs": 28986,
+    "DurationMs": 434.187
+  },
+  {
+    "Index": 93,
+    "Word": "the",
+    "OffsetMs": 29486,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 94,
+    "Word": "mystery",
+    "OffsetMs": 29631,
+    "DurationMs": 618.437
+  },
+  {
+    "Index": 95,
+    "Word": "kept",
+    "OffsetMs": 30355,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 96,
+    "Word": "his",
+    "OffsetMs": 30447,
+    "DurationMs": 210.5
+  },
+  {
+    "Index": 97,
+    "Word": "shop",
+    "OffsetMs": 30671,
+    "DurationMs": 171.062
+  },
+  {
+    "Index": 98,
+    "Word": "forever",
+    "OffsetMs": 30855,
+    "DurationMs": 263.187
+  },
+  {
+    "Index": 99,
+    "Word": "intriguing.",
+    "OffsetMs": 31131,
+    "DurationMs": 263.187
+  }
+]

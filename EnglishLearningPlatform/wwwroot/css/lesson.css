@@ -46,13 +46,14 @@ body.lesson-page {
 }
 
 /* Lesson card - with purple accents matching the theme */
+
 .lesson-card {
     background: #fff;
     border-radius: 1rem;
     box-shadow: 0 6px 15px rgba(142, 68, 173, 0.1);
-    border: 1px solid rgba(142, 68, 173, 0.15);
+    border: 2px solid #d1a4f8; /* Updated: thicker border with light purple color */
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -62,7 +63,9 @@ body.lesson-page {
     .lesson-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 10px 25px rgba(142, 68, 173, 0.18);
+        border-color: #8e44ad; /* Border color darkens on hover for better feedback */
     }
+
 
     /* Purple top border on hover */
     .lesson-card::before {

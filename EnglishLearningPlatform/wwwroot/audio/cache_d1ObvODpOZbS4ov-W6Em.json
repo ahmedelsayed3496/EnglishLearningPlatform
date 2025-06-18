@@ -1,0 +1,50 @@
+[
+  {
+    "Index": 0,
+    "Word": "Of",
+    "OffsetMs": 52,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 1,
+    "Word": "a",
+    "OffsetMs": 197,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 2,
+    "Word": "kind",
+    "OffsetMs": 289,
+    "DurationMs": 342.125
+  },
+  {
+    "Index": 3,
+    "Word": "likely",
+    "OffsetMs": 644,
+    "DurationMs": 342.125
+  },
+  {
+    "Index": 4,
+    "Word": "to",
+    "OffsetMs": 1000,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 5,
+    "Word": "be",
+    "OffsetMs": 1105,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 6,
+    "Word": "damaging;",
+    "OffsetMs": 1236,
+    "DurationMs": 578.937
+  },
+  {
+    "Index": 7,
+    "Word": "injurious",
+    "OffsetMs": 1921,
+    "DurationMs": 65.75
+  }
+]

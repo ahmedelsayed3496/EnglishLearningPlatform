@@ -1,0 +1,446 @@
+[
+  {
+    "Index": 0,
+    "Word": "Every",
+    "OffsetMs": 52,
+    "DurationMs": 342.125
+  },
+  {
+    "Index": 1,
+    "Word": "Sunday",
+    "OffsetMs": 407,
+    "DurationMs": 394.75
+  },
+  {
+    "Index": 2,
+    "Word": "at",
+    "OffsetMs": 815,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 3,
+    "Word": "4",
+    "OffsetMs": 934,
+    "DurationMs": 671.125
+  },
+  {
+    "Index": 4,
+    "Word": "p.m.,",
+    "OffsetMs": 1710,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 5,
+    "Word": "my",
+    "OffsetMs": 1815,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 6,
+    "Word": "grandmother",
+    "OffsetMs": 1960,
+    "DurationMs": 500
+  },
+  {
+    "Index": 7,
+    "Word": "sets",
+    "OffsetMs": 2473,
+    "DurationMs": 263.187
+  },
+  {
+    "Index": 8,
+    "Word": "out",
+    "OffsetMs": 2750,
+    "DurationMs": 171.062
+  },
+  {
+    "Index": 9,
+    "Word": "two",
+    "OffsetMs": 2934,
+    "DurationMs": 197.375
+  },
+  {
+    "Index": 10,
+    "Word": "extra",
+    "OffsetMs": 3144,
+    "DurationMs": 355.25
+  },
+  {
+    "Index": 11,
+    "Word": "teacups.",
+    "OffsetMs": 3513,
+    "DurationMs": 736.812
+  },
+  {
+    "Index": 12,
+    "Word": "She",
+    "OffsetMs": 4263,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 13,
+    "Word": "says",
+    "OffsetMs": 5171,
+    "DurationMs": 250
+  },
+  {
+    "Index": 14,
+    "Word": "they\u2019re",
+    "OffsetMs": 5434,
+    "DurationMs": 289.5
+  },
+  {
+    "Index": 15,
+    "Word": "for",
+    "OffsetMs": 5736,
+    "DurationMs": 184.187
+  },
+  {
+    "Index": 16,
+    "Word": "her",
+    "OffsetMs": 5934,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 17,
+    "Word": "sisters,",
+    "OffsetMs": 6065,
+    "DurationMs": 144.75
+  },
+  {
+    "Index": 18,
+    "Word": "long",
+    "OffsetMs": 6223,
+    "DurationMs": 605.25
+  },
+  {
+    "Index": 19,
+    "Word": "gone",
+    "OffsetMs": 6934,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 20,
+    "Word": "but",
+    "OffsetMs": 7026,
+    "DurationMs": 263.187
+  },
+  {
+    "Index": 21,
+    "Word": "never",
+    "OffsetMs": 7302,
+    "DurationMs": 342.125
+  },
+  {
+    "Index": 22,
+    "Word": "late.",
+    "OffsetMs": 7710,
+    "DurationMs": 157.875
+  },
+  {
+    "Index": 23,
+    "Word": "The",
+    "OffsetMs": 7881,
+    "DurationMs": 315.812
+  },
+  {
+    "Index": 24,
+    "Word": "room",
+    "OffsetMs": 8210,
+    "DurationMs": 342.125
+  },
+  {
+    "Index": 25,
+    "Word": "smells",
+    "OffsetMs": 8565,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 26,
+    "Word": "of",
+    "OffsetMs": 9473,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 27,
+    "Word": "jasmine",
+    "OffsetMs": 9592,
+    "DurationMs": 223.687
+  },
+  {
+    "Index": 28,
+    "Word": "and",
+    "OffsetMs": 9828,
+    "DurationMs": 421.062
+  },
+  {
+    "Index": 29,
+    "Word": "sugar,",
+    "OffsetMs": 10263,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 30,
+    "Word": "and",
+    "OffsetMs": 10355,
+    "DurationMs": 552.625
+  },
+  {
+    "Index": 31,
+    "Word": "for",
+    "OffsetMs": 10973,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 32,
+    "Word": "a",
+    "OffsetMs": 11105,
+    "DurationMs": 460.5
+  },
+  {
+    "Index": 33,
+    "Word": "moment,",
+    "OffsetMs": 11671,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 34,
+    "Word": "the",
+    "OffsetMs": 11763,
+    "DurationMs": 144.75
+  },
+  {
+    "Index": 35,
+    "Word": "air",
+    "OffsetMs": 11921,
+    "DurationMs": 157.875
+  },
+  {
+    "Index": 36,
+    "Word": "feels",
+    "OffsetMs": 12092,
+    "DurationMs": 52.625
+  },
+  {
+    "Index": 37,
+    "Word": "warmer",
+    "OffsetMs": 12157,
+    "DurationMs": 434.187
+  },
+  {
+    "Index": 38,
+    "Word": "\u2014",
+    "OffsetMs": 12697,
+    "DurationMs": 65.812
+  },
+  {
+    "Index": 39,
+    "Word": "like",
+    "OffsetMs": 12763,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 40,
+    "Word": "laughter",
+    "OffsetMs": 12868,
+    "DurationMs": 223.687
+  },
+  {
+    "Index": 41,
+    "Word": "is",
+    "OffsetMs": 13105,
+    "DurationMs": 276.312
+  },
+  {
+    "Index": 42,
+    "Word": "just",
+    "OffsetMs": 13394,
+    "DurationMs": 421.062
+  },
+  {
+    "Index": 43,
+    "Word": "waiting",
+    "OffsetMs": 13921,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 44,
+    "Word": "to",
+    "OffsetMs": 14013,
+    "DurationMs": 184.187
+  },
+  {
+    "Index": 45,
+    "Word": "surface.",
+    "OffsetMs": 14210,
+    "DurationMs": 434.187
+  },
+  {
+    "Index": 46,
+    "Word": "I",
+    "OffsetMs": 14697,
+    "DurationMs": 144.75
+  },
+  {
+    "Index": 47,
+    "Word": "used",
+    "OffsetMs": 14855,
+    "DurationMs": 276.312
+  },
+  {
+    "Index": 48,
+    "Word": "to",
+    "OffsetMs": 15144,
+    "DurationMs": 289.5
+  },
+  {
+    "Index": 49,
+    "Word": "think",
+    "OffsetMs": 15447,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 50,
+    "Word": "she",
+    "OffsetMs": 15565,
+    "DurationMs": 697.375
+  },
+  {
+    "Index": 51,
+    "Word": "was",
+    "OffsetMs": 16276,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 52,
+    "Word": "playing",
+    "OffsetMs": 17171,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 53,
+    "Word": "pretend.",
+    "OffsetMs": 17302,
+    "DurationMs": 276.312
+  },
+  {
+    "Index": 54,
+    "Word": "Now",
+    "OffsetMs": 17592,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 55,
+    "Word": "I",
+    "OffsetMs": 17684,
+    "DurationMs": 263.187
+  },
+  {
+    "Index": 56,
+    "Word": "just",
+    "OffsetMs": 17960,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 57,
+    "Word": "sip",
+    "OffsetMs": 18105,
+    "DurationMs": 157.875
+  },
+  {
+    "Index": 58,
+    "Word": "quietly",
+    "OffsetMs": 18276,
+    "DurationMs": 315.812
+  },
+  {
+    "Index": 59,
+    "Word": "and",
+    "OffsetMs": 18605,
+    "DurationMs": 618.437
+  },
+  {
+    "Index": 60,
+    "Word": "try",
+    "OffsetMs": 19236,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 61,
+    "Word": "not",
+    "OffsetMs": 20131,
+    "DurationMs": 263.187
+  },
+  {
+    "Index": 62,
+    "Word": "to",
+    "OffsetMs": 20407,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 63,
+    "Word": "listen",
+    "OffsetMs": 20500,
+    "DurationMs": 276.312
+  },
+  {
+    "Index": 64,
+    "Word": "too",
+    "OffsetMs": 20789,
+    "DurationMs": 210.5
+  },
+  {
+    "Index": 65,
+    "Word": "closely",
+    "OffsetMs": 21013,
+    "DurationMs": 565.812
+  },
+  {
+    "Index": 66,
+    "Word": "when",
+    "OffsetMs": 21644,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 67,
+    "Word": "the",
+    "OffsetMs": 21776,
+    "DurationMs": 184.187
+  },
+  {
+    "Index": 68,
+    "Word": "spoons",
+    "OffsetMs": 21973,
+    "DurationMs": 210.5
+  },
+  {
+    "Index": 69,
+    "Word": "clink",
+    "OffsetMs": 22197,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 70,
+    "Word": "without",
+    "OffsetMs": 22315,
+    "DurationMs": 315.812
+  },
+  {
+    "Index": 71,
+    "Word": "hands.r",
+    "OffsetMs": 22644,
+    "DurationMs": 197.375
+  },
+  {
+    "Index": 72,
+    "Word": "at",
+    "OffsetMs": 22855,
+    "DurationMs": 526.312
+  },
+  {
+    "Index": 73,
+    "Word": "all.",
+    "OffsetMs": 23394,
+    "DurationMs": 131.562
+  }
+]

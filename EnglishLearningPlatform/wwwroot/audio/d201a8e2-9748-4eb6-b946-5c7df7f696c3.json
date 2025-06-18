@@ -1,0 +1,404 @@
+[
+  {
+    "Index": 0,
+    "Word": "At",
+    "OffsetMs": 52,
+    "DurationMs": 157.875
+  },
+  {
+    "Index": 1,
+    "Word": "exactly",
+    "OffsetMs": 223,
+    "DurationMs": 631.562
+  },
+  {
+    "Index": 2,
+    "Word": "3:17",
+    "OffsetMs": 921,
+    "DurationMs": 1263.1869
+  },
+  {
+    "Index": 3,
+    "Word": "a.m.,",
+    "OffsetMs": 2289,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 4,
+    "Word": "the",
+    "OffsetMs": 2368,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 5,
+    "Word": "elevator",
+    "OffsetMs": 2460,
+    "DurationMs": 513.187
+  },
+  {
+    "Index": 6,
+    "Word": "in",
+    "OffsetMs": 2986,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 7,
+    "Word": "building",
+    "OffsetMs": 3092,
+    "DurationMs": 342.125
+  },
+  {
+    "Index": 8,
+    "Word": "C",
+    "OffsetMs": 3447,
+    "DurationMs": 289.5
+  },
+  {
+    "Index": 9,
+    "Word": "comes",
+    "OffsetMs": 3815,
+    "DurationMs": 276.312
+  },
+  {
+    "Index": 10,
+    "Word": "alive.",
+    "OffsetMs": 4105,
+    "DurationMs": 592.125
+  },
+  {
+    "Index": 11,
+    "Word": "No",
+    "OffsetMs": 4710,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 12,
+    "Word": "one",
+    "OffsetMs": 5605,
+    "DurationMs": 250
+  },
+  {
+    "Index": 13,
+    "Word": "calls",
+    "OffsetMs": 5868,
+    "DurationMs": 171.062
+  },
+  {
+    "Index": 14,
+    "Word": "it.",
+    "OffsetMs": 6052,
+    "DurationMs": 315.812
+  },
+  {
+    "Index": 15,
+    "Word": "No",
+    "OffsetMs": 6381,
+    "DurationMs": 197.375
+  },
+  {
+    "Index": 16,
+    "Word": "one",
+    "OffsetMs": 6592,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 17,
+    "Word": "enters.",
+    "OffsetMs": 7486,
+    "DurationMs": 276.312
+  },
+  {
+    "Index": 18,
+    "Word": "But",
+    "OffsetMs": 7776,
+    "DurationMs": 236.812
+  },
+  {
+    "Index": 19,
+    "Word": "it",
+    "OffsetMs": 8026,
+    "DurationMs": 618.437
+  },
+  {
+    "Index": 20,
+    "Word": "moves,",
+    "OffsetMs": 8657,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 21,
+    "Word": "floor",
+    "OffsetMs": 9565,
+    "DurationMs": 157.875
+  },
+  {
+    "Index": 22,
+    "Word": "to",
+    "OffsetMs": 9736,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 23,
+    "Word": "floor,",
+    "OffsetMs": 9842,
+    "DurationMs": 460.5
+  },
+  {
+    "Index": 24,
+    "Word": "pausing",
+    "OffsetMs": 10407,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 25,
+    "Word": "longer",
+    "OffsetMs": 10500,
+    "DurationMs": 289.5
+  },
+  {
+    "Index": 26,
+    "Word": "than",
+    "OffsetMs": 10802,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 27,
+    "Word": "it",
+    "OffsetMs": 10934,
+    "DurationMs": 434.187
+  },
+  {
+    "Index": 28,
+    "Word": "should",
+    "OffsetMs": 11473,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 29,
+    "Word": "on",
+    "OffsetMs": 11565,
+    "DurationMs": 394.75
+  },
+  {
+    "Index": 30,
+    "Word": "the",
+    "OffsetMs": 11973,
+    "DurationMs": 355.25
+  },
+  {
+    "Index": 31,
+    "Word": "6th.",
+    "OffsetMs": 12342,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 32,
+    "Word": "The",
+    "OffsetMs": 12473,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 33,
+    "Word": "security",
+    "OffsetMs": 12565,
+    "DurationMs": 210.5
+  },
+  {
+    "Index": 34,
+    "Word": "guard",
+    "OffsetMs": 12789,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 35,
+    "Word": "once",
+    "OffsetMs": 12907,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 36,
+    "Word": "swore",
+    "OffsetMs": 13013,
+    "DurationMs": 565.812
+  },
+  {
+    "Index": 37,
+    "Word": "he",
+    "OffsetMs": 13592,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 38,
+    "Word": "heard",
+    "OffsetMs": 14486,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 39,
+    "Word": "humming",
+    "OffsetMs": 14631,
+    "DurationMs": 500
+  },
+  {
+    "Index": 40,
+    "Word": "inside.",
+    "OffsetMs": 15144,
+    "DurationMs": 276.312
+  },
+  {
+    "Index": 41,
+    "Word": "They",
+    "OffsetMs": 15486,
+    "DurationMs": 289.5
+  },
+  {
+    "Index": 42,
+    "Word": "told",
+    "OffsetMs": 15789,
+    "DurationMs": 355.25
+  },
+  {
+    "Index": 43,
+    "Word": "him",
+    "OffsetMs": 16157,
+    "DurationMs": 157.875
+  },
+  {
+    "Index": 44,
+    "Word": "it",
+    "OffsetMs": 16328,
+    "DurationMs": 223.687
+  },
+  {
+    "Index": 45,
+    "Word": "was",
+    "OffsetMs": 16565,
+    "DurationMs": 328.937
+  },
+  {
+    "Index": 46,
+    "Word": "the",
+    "OffsetMs": 16907,
+    "DurationMs": 578.937
+  },
+  {
+    "Index": 47,
+    "Word": "wind",
+    "OffsetMs": 17500,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 48,
+    "Word": "in",
+    "OffsetMs": 18394,
+    "DurationMs": 157.875
+  },
+  {
+    "Index": 49,
+    "Word": "the",
+    "OffsetMs": 18565,
+    "DurationMs": 302.625
+  },
+  {
+    "Index": 50,
+    "Word": "shaft.",
+    "OffsetMs": 18881,
+    "DurationMs": 144.75
+  },
+  {
+    "Index": 51,
+    "Word": "He",
+    "OffsetMs": 19039,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 52,
+    "Word": "doesn\u2019t",
+    "OffsetMs": 19157,
+    "DurationMs": 171.062
+  },
+  {
+    "Index": 53,
+    "Word": "work",
+    "OffsetMs": 19342,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 54,
+    "Word": "there",
+    "OffsetMs": 19473,
+    "DurationMs": 302.625
+  },
+  {
+    "Index": 55,
+    "Word": "anymore,",
+    "OffsetMs": 19789,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 56,
+    "Word": "and",
+    "OffsetMs": 19881,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 57,
+    "Word": "the",
+    "OffsetMs": 19973,
+    "DurationMs": 644.75
+  },
+  {
+    "Index": 58,
+    "Word": "new",
+    "OffsetMs": 20631,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 59,
+    "Word": "guard",
+    "OffsetMs": 21539,
+    "DurationMs": 157.875
+  },
+  {
+    "Index": 60,
+    "Word": "doesn\u2019t",
+    "OffsetMs": 21710,
+    "DurationMs": 328.937
+  },
+  {
+    "Index": 61,
+    "Word": "look",
+    "OffsetMs": 22052,
+    "DurationMs": 223.687
+  },
+  {
+    "Index": 62,
+    "Word": "at",
+    "OffsetMs": 22289,
+    "DurationMs": 157.875
+  },
+  {
+    "Index": 63,
+    "Word": "the",
+    "OffsetMs": 22460,
+    "DurationMs": 539.5
+  },
+  {
+    "Index": 64,
+    "Word": "elevator",
+    "OffsetMs": 23105,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 65,
+    "Word": "at",
+    "OffsetMs": 23184,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 66,
+    "Word": "all.",
+    "OffsetMs": 23289,
+    "DurationMs": 92.125
+  }
+]

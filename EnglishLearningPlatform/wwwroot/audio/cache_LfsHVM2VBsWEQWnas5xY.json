@@ -1,0 +1,50 @@
+[
+  {
+    "Index": 0,
+    "Word": "The",
+    "OffsetMs": 52,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 1,
+    "Word": "truth",
+    "OffsetMs": 197,
+    "DurationMs": 355.25
+  },
+  {
+    "Index": 2,
+    "Word": "behind",
+    "OffsetMs": 565,
+    "DurationMs": 381.562
+  },
+  {
+    "Index": 3,
+    "Word": "the",
+    "OffsetMs": 960,
+    "DurationMs": 65.812
+  },
+  {
+    "Index": 4,
+    "Word": "events",
+    "OffsetMs": 1039,
+    "DurationMs": 421.062
+  },
+  {
+    "Index": 5,
+    "Word": "remains",
+    "OffsetMs": 1526,
+    "DurationMs": 381.562
+  },
+  {
+    "Index": 6,
+    "Word": "a",
+    "OffsetMs": 1921,
+    "DurationMs": 39.5
+  },
+  {
+    "Index": 7,
+    "Word": "mystery.",
+    "OffsetMs": 1973,
+    "DurationMs": 565.812
+  }
+]

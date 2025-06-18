@@ -1,0 +1,50 @@
+[
+  {
+    "Index": 0,
+    "Word": "I",
+    "OffsetMs": 52,
+    "DurationMs": 157.875
+  },
+  {
+    "Index": 1,
+    "Word": "was",
+    "OffsetMs": 223,
+    "DurationMs": 210.5
+  },
+  {
+    "Index": 2,
+    "Word": "deaf,",
+    "OffsetMs": 447,
+    "DurationMs": 381.562
+  },
+  {
+    "Index": 3,
+    "Word": "and",
+    "OffsetMs": 934,
+    "DurationMs": 65.812
+  },
+  {
+    "Index": 4,
+    "Word": "now",
+    "OffsetMs": 1000,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 5,
+    "Word": "I",
+    "OffsetMs": 1118,
+    "DurationMs": 210.5
+  },
+  {
+    "Index": 6,
+    "Word": "can",
+    "OffsetMs": 1342,
+    "DurationMs": 92.125
+  },
+  {
+    "Index": 7,
+    "Word": "hear.",
+    "OffsetMs": 1447,
+    "DurationMs": 184.187
+  }
+]

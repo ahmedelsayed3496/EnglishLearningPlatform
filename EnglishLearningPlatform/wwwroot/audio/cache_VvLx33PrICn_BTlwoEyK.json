@@ -1,0 +1,44 @@
+[
+  {
+    "Index": 0,
+    "Word": "(stative)",
+    "OffsetMs": 52,
+    "DurationMs": 631.562
+  },
+  {
+    "Index": 1,
+    "Word": "To",
+    "OffsetMs": 789,
+    "DurationMs": 78.937
+  },
+  {
+    "Index": 2,
+    "Word": "perceive",
+    "OffsetMs": 868,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 3,
+    "Word": "sounds",
+    "OffsetMs": 986,
+    "DurationMs": 434.187
+  },
+  {
+    "Index": 4,
+    "Word": "through",
+    "OffsetMs": 1434,
+    "DurationMs": 394.75
+  },
+  {
+    "Index": 5,
+    "Word": "the",
+    "OffsetMs": 1842,
+    "DurationMs": 184.187
+  },
+  {
+    "Index": 6,
+    "Word": "ear.",
+    "OffsetMs": 2039,
+    "DurationMs": 105.25
+  }
+]

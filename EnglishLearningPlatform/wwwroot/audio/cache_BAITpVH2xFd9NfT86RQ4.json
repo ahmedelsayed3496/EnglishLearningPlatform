@@ -1,0 +1,44 @@
+[
+  {
+    "Index": 0,
+    "Word": "To",
+    "OffsetMs": 52,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 1,
+    "Word": "direct",
+    "OffsetMs": 184,
+    "DurationMs": 486.812
+  },
+  {
+    "Index": 2,
+    "Word": "or",
+    "OffsetMs": 723,
+    "DurationMs": 157.875
+  },
+  {
+    "Index": 3,
+    "Word": "be",
+    "OffsetMs": 894,
+    "DurationMs": 131.562
+  },
+  {
+    "Index": 4,
+    "Word": "in",
+    "OffsetMs": 1039,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 5,
+    "Word": "charge",
+    "OffsetMs": 1171,
+    "DurationMs": 355.25
+  },
+  {
+    "Index": 6,
+    "Word": "of.",
+    "OffsetMs": 1539,
+    "DurationMs": 302.625
+  }
+]

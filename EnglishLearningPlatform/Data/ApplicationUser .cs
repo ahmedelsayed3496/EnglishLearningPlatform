@@ -9,6 +9,8 @@ namespace EnglishLearningPlatform.Data
         public int FlashcardsCreated { get; set; }
         public int CurrentStreak { get; set; }
         public int TotalLoginDays { get; set; }
+        public DateTime? LastLoginDate { get; set; }
+
 
         public virtual ICollection<Lesson> Lessons { get; set; }
         public virtual ICollection<Flashcard> Flashcards { get; set; }

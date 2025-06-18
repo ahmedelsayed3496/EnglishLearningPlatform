@@ -1,0 +1,62 @@
+[
+  {
+    "Index": 0,
+    "Word": "Wear",
+    "OffsetMs": 52,
+    "DurationMs": 223.687
+  },
+  {
+    "Index": 1,
+    "Word": "a",
+    "OffsetMs": 289,
+    "DurationMs": 52.625
+  },
+  {
+    "Index": 2,
+    "Word": "hat",
+    "OffsetMs": 355,
+    "DurationMs": 328.937
+  },
+  {
+    "Index": 3,
+    "Word": "to",
+    "OffsetMs": 736,
+    "DurationMs": 105.25
+  },
+  {
+    "Index": 4,
+    "Word": "protect",
+    "OffsetMs": 855,
+    "DurationMs": 434.187
+  },
+  {
+    "Index": 5,
+    "Word": "your",
+    "OffsetMs": 1302,
+    "DurationMs": 118.437
+  },
+  {
+    "Index": 6,
+    "Word": "skin",
+    "OffsetMs": 1434,
+    "DurationMs": 421.062
+  },
+  {
+    "Index": 7,
+    "Word": "from",
+    "OffsetMs": 1868,
+    "DurationMs": 157.875
+  },
+  {
+    "Index": 8,
+    "Word": "harmful",
+    "OffsetMs": 2039,
+    "DurationMs": 460.5
+  },
+  {
+    "Index": 9,
+    "Word": "sunlight.",
+    "OffsetMs": 2513,
+    "DurationMs": 605.25
+  }
+]
